@@ -14,3 +14,12 @@
 //     )
 // }
 
+{/* <h1>List of Hobbies</h1>
+<h2>Jacob</h2>
+<ul>
+    <li>Football</li>
+    <li>Gaming</li>
+    <li>Coding</li>
+    <li>Outside</li>
+    <li>Learning</li>
+</ul> */}

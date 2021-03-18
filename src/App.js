@@ -1,13 +1,20 @@
 import { Switch, Route } from "react-router-dom";
-
+import { EyeBrow } from "./components/EyeBrow";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
+import Registration from "./views/Registration";
+import MessageList from "./components/MessageList";
+import Settings from './views/Settings';
 
 function App() {
   return (
     <div className="App">
+      <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path='/registration' component={Registration} />
+        <Route path='/messages' component={MessageList} />
+        <Route path='/settings' component={Settings} />
         <Route component={NotFound} />
       </Switch>
     </div>
@@ -15,15 +22,4 @@ function App() {
 }
 
 export default App;
-
-// --Additional notes on MVP--
-// 1. Going to need a createUser function.
-// 2. Going to need a Registration page.
-// 3. Create Account Button which links 
-// to Registration page.
-// 4. Will Login go to Feed instantly or Profile?
-// 5. Will we have messages as feature and then
-// can post updates and status / pictures or 
-// just have messages be in the feed ?
-
 

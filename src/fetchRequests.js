@@ -21,7 +21,8 @@ export const logoutRequest = (token) => {
 // export const messagesRequest = () => {
 //   return fetch(baseURL + "messages?limit=10", {
 //     method: "GET",
-//     headers: { "Content-Type": "application/json" },
+//     headers: { "Content-Type": "application/json", 
+        // Authorization: "Bearer " + token },
 
 //   })
 // }
@@ -33,3 +34,18 @@ export const logoutRequest = (token) => {
 
 //   })
 // }
+
+// export const signUpRequest = () => {
+//   return fetch(baseURL + " ", {
+//     headers: { },
+//   })
+// }
+
+
+// export const birdPhotoRequest = () => {
+
+// }
+
+
+// going to be using aurhtoirzation and token when making all future requests 
+// when the user is logged in .
