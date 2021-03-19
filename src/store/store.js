@@ -7,6 +7,7 @@ const initialState = { user: {token: ""}, messages: [] };
 // set action types
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
+export const SIGN_UP = "SIGN_UP";
 // export const CREATE_USER = "CREATE_USER";
 
 // define reducer function
@@ -18,8 +19,8 @@ const reducer = (state, action) => {
       return { user: {} };
     default:
       return state;
-      // case  SIGN_UP:
-      // return { }
+      case  SIGN_UP:
+      return { user: action.payload };
   }
 };
 

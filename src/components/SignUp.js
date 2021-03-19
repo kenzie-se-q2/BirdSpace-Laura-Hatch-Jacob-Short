@@ -1,45 +1,73 @@
-import React from 'react';
-import { signUpRequest } from '../fetchRequests';
-import { SIGN_UP } from '../store/store';
+import React, { createContext, useState } from "react";
+import { signUpRequest } from "../fetchRequests";
+import { SIGN_UP, useStore } from "../store/store";
+import { Link } from 'react-router-dom';
 
- const SignUp = (props) => {
-    // will need to store sign in information in state.
 
-    // const handleSignUp = (e) => {
-    //     signUpRequest() => 
-    //     dispatchEvent({ type: SIGN_UP, payload: })
-    // }
+export const NewUserInfo = createContext()
 
-    // const handleChange = (e) => {
+const SignUp = (props) => {
+  const dispatch = useStore((state) => state.dispatch);
 
-    // }
-    return (
-        <>
-        <h1>Registration Page</h1>
-            {/* <form id="signup-form" onSubmit={handleSignUp}>
+  const [createUserData, setCreateUserData] = useState({
+    username: "",
+    displayName: "",
+    password: "",
+  });
+
+  const handleSignUp = (e) => {
+    signUpRequest(
+      createUserData.username,
+      createUserData.displayName,
+      createUserData.password
+    ).then((newUserData) => dispatch({ type: SIGN_UP, payload: newUserData }));
+  };
+
+  const handleChange = (e) => {
+    const inputName = e.target.name;
+    const inputValue = e.target.value;
+    setCreateUserData((state) => ({ ...state, [inputName]: inputValue }));
+  };
+
+  return (
+    <NewUserInfo.Provider value={createUserData}>
+    <>
+      <h1>Registration Page</h1>
+      <form id="signup-form" onSubmit={handleSignUp}>
                 <label htmlFor="username">Username</label>
                 <input
                     type="text"
                     name="username"
-                    // value={}
+                    value={createUserData.username}
                     autoFocus
                     required
-                    // onChange={handleChange}
+                    onChange={handleChange}
                 />
-                <input
+                <label htmlFor="displayName">Display Name</label>
+                <input 
+                    type="text"
+                    name="displayName"
+                    value={createUserData.displayName}
+                    required
+                    onChange={handleChange}
+                />
+                <label htmlFor="password">Password</label>
+                 <input
                     type="password"
                     name="password"
-                    // value={}
+                    value={createUserData.password}
                     required
-                    // onChange={handleChange}
+                    onChange={handleChange}
                 />
+                <Link to='/feed'>
                 <button type="submit">Sign Up</button>
-            </form> */}
-        </>
-    )
-}
+                </Link>
+            </form>
+    </>
+    </NewUserInfo.Provider>
+  );
+};
 
 export default SignUp;
 
 // will hold the data for user in local state.
-

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
-
 import { LOGIN, useStore } from "../store/store";
 
 function Login(props){
@@ -22,6 +21,7 @@ function Login(props){
     const inputName = e.target.name;
     const inputValue = e.target.value;
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
+    //-----------------------------------^key--------^value 
   };
 
   return (

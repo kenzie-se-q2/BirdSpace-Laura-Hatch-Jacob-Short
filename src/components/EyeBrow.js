@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export const EyeBrow = (props) => {
     return (
         <div className='eye-brow'>
-        <nav>
+        <nav className='nav'>
             <Link to='/'>Home</Link>
-            <Link to='/registration'>Sign Up/Create An Account</Link>
+            <Link to='/registration'>Sign Up</Link>
             <Link to='/settings'>Settings</Link>
             <Link to=''>Sign Out</Link>
         </nav>
