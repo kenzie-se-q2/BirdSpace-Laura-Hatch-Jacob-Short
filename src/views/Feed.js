@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import FeedItem from '../views/FeedItem';
+<<<<<<< Updated upstream
 import { useStore } from '../store/store';
 
+=======
+>>>>>>> Stashed changes
 
 const Feed = (props) => {
 

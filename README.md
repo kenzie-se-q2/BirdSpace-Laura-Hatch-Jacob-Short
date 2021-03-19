@@ -9,9 +9,11 @@ See my.kenzie.academy for details.
 
 ## Credits and References
 
-Team Members: Laura Hatch, Eric Castillo, Zachary Tyler, Jacob Short
+Team Members: 
+  Members of project are mimicking roles to gain experience like real work project with dev roles🥇 : Laura Hatch(PM/QA/Testing/ux design), Jacob Short( Senior Software Engineer), Eric Castillo(Lead Software Engineer), Zachary Tyler(Software Engineer)
 
-References
+References: 
+ https://docs.google.com/presentation/d/1VdMdoYOGhqjI6bJlz-ttNOXhISJTYJSJVckW05_i2NQ/edit#slide=id.gcb9a0b074_1_0 , https://github.com/ladeeluc/catstagram2.0, Nathan Hatch - Martinez(SE at Bouteous) - suggested best practices to manage project
 
 Create a product backlog of a list of features to start adding.
 

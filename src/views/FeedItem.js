@@ -5,10 +5,15 @@ import { NewUserInfo } from '../components/SignUp';
 import { birdPhotoRequest } from "../fetchRequests";
 
 const FeedItem = (props) => {
+<<<<<<< Updated upstream
 
   // useEffect(() => {
   //   birdPhotoRequest()
   // })
+=======
+    const newUser = useContext(NewUserInfo);
+    
+>>>>>>> Stashed changes
   return (
     <div className="feed-item">
       <h1>This will display the feed</h1>
