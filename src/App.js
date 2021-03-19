@@ -6,6 +6,7 @@ import Registration from "./views/Registration";
 import MessageList from "./components/MessageList";
 import Settings from './views/Settings';
 import Feed from './views/Feed';
+import Profile from './views/Profile'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/messages' component={MessageList} />
         <Route path='/settings' component={Settings} />
         <Route path='/feed' component={Feed} />
+        <Route path='/profile' component={Profile} />
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -1,18 +1,17 @@
-import MessageItem from "../components/MessageItem";
+import React, { useEffect } from "react";
+import Menu from "../components/Menu";
+import { messagesRequest } from '../fetchRequests';
 
-const MessageList = (props) => {
-    return (
-        <section className="main">
-            {/* <ul className="message-list">
-                {props.message.map((message) => (
-                    // <MessageItem 
-                    // // this will hold the key value pairs for our messages
-                    // />
-                ))}
-            </ul> */}
-            <MessageItem/>
-            </section>
-    )
+
+export default function MessageList() {
+
+    useEffect(() => {
+        messagesRequest().then((data) => console.log(data))
+    }, [])
+  return (
+    <>
+      <Menu />
+      <h1>This is your message list!</h1>
+    </>
+  );
 }
-
-export default MessageList;

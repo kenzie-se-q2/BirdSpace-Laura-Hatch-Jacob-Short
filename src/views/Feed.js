@@ -1,28 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import FeedItem from '../views/FeedItem';
+import { useStore } from '../store/store';
+
+
 const Feed = (props) => {
-    const [photos, setPhotos] = useState([])
-    const addPhoto = (url) => {
-        setPhotos((prevState) => {
-        const newPhoto = {
-            url: url,
-            likes: 0
-        } 
-        
-        return prevState.concat(newPhoto)
-    })
-}
-        useEffect(() => {
-        fetch("https://api.jsonbin.io/b/600f8e05bca934583e41c665")
-        .then(data  => data.json())
-        .then((newData) => {
-        setPhotos(newData.photos)
-})
-}, [])
+
     return (
         <div className='feed'>
-            {photos.map(bird =>
-                <FeedItem/>)}
+            <h1>Welcome {} , lets checkout the recent posts</h1>
+            {/* {photos.map(bird =>
+                )} */}
+                {/* this will be my birdPhotoRequest */}
+                <FeedItem/>
         </div>
     )
 }

@@ -9,6 +9,8 @@ export const EyeBrow = (props) => {
             <Link to='/registration'>Sign Up</Link>
             <Link to='/settings'>Settings</Link>
             <Link to=''>Sign Out</Link>
+            <Link to='/profile'>Profile</Link>
+            {/* can do a ternary to conditionally render if logged in */}
         </nav>
         </div>
     )

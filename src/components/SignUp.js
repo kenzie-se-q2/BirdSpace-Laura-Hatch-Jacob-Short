@@ -1,10 +1,8 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import { signUpRequest } from "../fetchRequests";
 import { SIGN_UP, useStore } from "../store/store";
 import { Link } from 'react-router-dom';
 
-
-export const NewUserInfo = createContext()
 
 const SignUp = (props) => {
   const dispatch = useStore((state) => state.dispatch);
@@ -28,9 +26,9 @@ const SignUp = (props) => {
     const inputValue = e.target.value;
     setCreateUserData((state) => ({ ...state, [inputName]: inputValue }));
   };
+     //-------------------------------------------^key--------^value 
 
   return (
-    <NewUserInfo.Provider value={createUserData}>
     <>
       <h1>Registration Page</h1>
       <form id="signup-form" onSubmit={handleSignUp}>
@@ -64,10 +62,8 @@ const SignUp = (props) => {
                 </Link>
             </form>
     </>
-    </NewUserInfo.Provider>
   );
 };
 
 export default SignUp;
 
-// will hold the data for user in local state.
