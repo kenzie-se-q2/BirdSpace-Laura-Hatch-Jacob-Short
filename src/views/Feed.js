@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import FeedItem from '../views/FeedItem';
 <<<<<<< Updated upstream
 import { useStore } from '../store/store';
+import BirdCard from '../components/BirdCard';
+
 
 =======
 >>>>>>> Stashed changes
@@ -15,6 +17,7 @@ const Feed = (props) => {
                 )} */}
                 {/* this will be my birdPhotoRequest */}
                 <FeedItem/>
+                <BirdCard />
         </div>
     )
 }
@@ -22,3 +25,4 @@ const Feed = (props) => {
 export default Feed;
 
 // will need to import state from the sign up page. 
+

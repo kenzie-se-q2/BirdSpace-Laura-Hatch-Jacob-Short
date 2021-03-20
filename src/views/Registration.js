@@ -8,7 +8,7 @@ export const Registration = (props) => {
         <div className='registration'>
             <>
             {/* <Eyebrow/> */}
-            <h1>Registration</h1>
+            <h1>Logo</h1>
                 {/* will have our logo somehwere on this page  */}
             <h2>Start off by confirming your age!</h2>
             <SignUp/>

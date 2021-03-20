@@ -27,3 +27,10 @@ function App() {
 
 export default App;
 
+
+// git branch 
+// git pull
+// git add .
+// git commit -m""
+// git push
+
