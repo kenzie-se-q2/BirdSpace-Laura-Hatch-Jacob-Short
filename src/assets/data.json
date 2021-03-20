@@ -2,150 +2,27 @@
   "birdPhotos": [
     {
       "id": 76,
-        "url": "http://www.buscaves.cl/img/17082018024245aguilucho_chico_tomas_rivas_web.jpg"
+      "url": "http://www.buscaves.cl/img/17082018024245aguilucho_chico_tomas_rivas_web.jpg"
     },
 
     {
       "id": 74,
-      "uid": "74-buteo-polyosoma",
-      "map": { "svg": "http://www.buscaves.cl/images/svg.php?ave=74" },
-      "image": {
-        "url": "http://www.buscaves.cl/img/17082018024833aguiluchocomun_tomas_rivas_web.jpg",
-        "uri": "http://www.buscaves.cl/img/",
-        "filename": "17082018024833aguiluchocomun_tomas_rivas_web.jpg",
-        "name": "17082018024833aguiluchocomun_tomas_rivas_web",
-        "ext": "jpg"
-      },
-      "gallery": [
-        {
-          "url": "http://www.buscaves.cl/img/17082018024833aguiluchocomun_tomas_rivas_web.jpg",
-          "uri": "http://www.buscaves.cl/img/",
-          "filename": "17082018024833aguiluchocomun_tomas_rivas_web.jpg",
-          "name": "17082018024833aguiluchocomun_tomas_rivas_web",
-          "ext": "jpg"
-        }
-      ],
-      "names": {
-        "spanish": "Aguilucho Común",
-        "latin": "Buteo polyosoma",
-        "english": "Red-backed Hawk"
-      },
-      "info": {
-        "name": {
-          "name": "Nombre en Inglés",
-          "key": "name",
-          "value": "Red-backed Hawk"
-        }
-      }
+      "url": "http://www.buscaves.cl/img/17082018024833aguiluchocomun_tomas_rivas_web.jpg"
     },
 
     {
       "id": 75,
-      "uid": "75-buteo-ventralis",
-      "map": { "svg": "http://www.buscaves.cl/images/svg.php?ave=75" },
-      "image": {
-        "url": "http://www.buscaves.cl/img/17082018024423aguiluchocolarojiza_tomas_rivas_web.jpg",
-        "uri": "http://www.buscaves.cl/img/",
-        "filename": "17082018024423aguiluchocolarojiza_tomas_rivas_web.jpg",
-        "name": "17082018024423aguiluchocolarojiza_tomas_rivas_web",
-        "ext": "jpg"
-      },
-      "gallery": [
-        {
-          "url": "http://www.buscaves.cl/img/17082018024423aguiluchocolarojiza_tomas_rivas_web.jpg",
-          "uri": "http://www.buscaves.cl/img/",
-          "filename": "17082018024423aguiluchocolarojiza_tomas_rivas_web.jpg",
-          "name": "17082018024423aguiluchocolarojiza_tomas_rivas_web",
-          "ext": "jpg"
-        }
-      ],
-      "names": {
-        "spanish": "Aguilucho de Cola Rojiza",
-        "latin": "Buteo ventralis",
-        "english": "Rufous-tailed Hawk"
-      },
-      "info": {
-        "name": {
-          "name": "Nombre en Inglés",
-          "key": "name",
-          "value": "Rufous-tailed Hawk"
-        }
-      }
+      "url": "http://www.buscaves.cl/img/17082018024423aguiluchocolarojiza_tomas_rivas_web.jpg"
     },
 
     {
       "id": 8,
-      "uid": "8-thalassarche-melanophrys",
-      "map": { "svg": "http://www.buscaves.cl/images/svg.php?ave=8" },
-      "image": {
-        "url": "http://www.buscaves.cl/img/20082018100543albatros_de_ceja_negra_marcos_baumann_web.jpg",
-        "uri": "http://www.buscaves.cl/img/",
-        "filename": "20082018100543albatros_de_ceja_negra_marcos_baumann_web.jpg",
-        "name": "20082018100543albatros_de_ceja_negra_marcos_baumann_web",
-        "ext": "jpg"
-      },
-      "gallery": [
-        {
-          "url": "http://www.buscaves.cl/img/20082018100543albatros_de_ceja_negra_marcos_baumann_web.jpg",
-          "uri": "http://www.buscaves.cl/img/",
-          "filename": "20082018100543albatros_de_ceja_negra_marcos_baumann_web.jpg",
-          "name": "20082018100543albatros_de_ceja_negra_marcos_baumann_web",
-          "ext": "jpg"
-        }
-      ],
-      "names": {
-        "spanish": "Albatros de ceja negra",
-        "latin": "Thalassarche melanophrys",
-        "english": "Black browed albatross (Black-browed mollymawk)"
-      },
-      "info": {
-        "name": {
-          "name": "Nombre en Inglés",
-          "key": "name",
-          "value": "Black browed albatross (Black-browed mollymawk)"
-        }
-      }
+      "url": "http://www.buscaves.cl/img/20082018100543albatros_de_ceja_negra_marcos_baumann_web.jpg"
     },
 
     {
       "id": 248,
-      "uid": "248-diomedea-exulans",
-      "map": { "svg": "http://www.buscaves.cl/images/svg.php?ave=248" },
-      "image": {
-        "url": "http://www.buscaves.cl/img/21082018011740albatros_errrante_liam_quinn_web.jpg",
-        "uri": "http://www.buscaves.cl/img/",
-        "filename": "21082018011740albatros_errrante_liam_quinn_web.jpg",
-        "name": "21082018011740albatros_errrante_liam_quinn_web",
-        "ext": "jpg"
-      },
-      "gallery": [
-        {
-          "url": "http://www.buscaves.cl/img/21082018011740albatros_errrante_liam_quinn_web.jpg",
-          "uri": "http://www.buscaves.cl/img/",
-          "filename": "21082018011740albatros_errrante_liam_quinn_web.jpg",
-          "name": "21082018011740albatros_errrante_liam_quinn_web",
-          "ext": "jpg"
-        },
-        {
-          "url": "http://www.buscaves.cl/img/21082018012238albatros_errante_russell_scott_web.jpg",
-          "uri": "http://www.buscaves.cl/img/",
-          "filename": "21082018012238albatros_errante_russell_scott_web.jpg",
-          "name": "21082018012238albatros_errante_russell_scott_web",
-          "ext": "jpg"
-        }
-      ],
-      "names": {
-        "spanish": "Albatros errante",
-        "latin": "Diomedea exulans",
-        "english": "Wandering Albatross"
-      },
-      "info": {
-        "name": {
-          "name": "Nombre en Inglés",
-          "key": "name",
-          "value": "Wandering Albatross"
-        }
-      }
+      "url": "http://www.buscaves.cl/img/21082018011740albatros_errrante_liam_quinn_web.jpg"
     }
   ]
 }
