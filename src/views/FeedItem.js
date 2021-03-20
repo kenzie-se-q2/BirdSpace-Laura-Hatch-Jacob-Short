@@ -9,10 +9,7 @@ import { birdPhotoRequest } from "../fetchRequests";
 const FeedItem = (props) => {
 
 
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
   return (
     <div className="feed-item">
       <h1>This will display the feed</h1>

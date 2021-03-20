@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< Updated upstream
 // import FeedItem from '../views/FeedItem';
-=======
 import FeedItem from '../views/FeedItem';
->>>>>>> Stashed changes
 import { useStore } from '../store/store';
 import BirdCard from '../components/BirdCard';
 
