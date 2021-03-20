@@ -8,6 +8,7 @@ import Settings from './views/Settings';
 import Feed from './views/Feed';
 import Profile from './views/Profile'
 
+
 function App() {
   return (
     <div className="App">
