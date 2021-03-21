@@ -14,8 +14,11 @@ Team Members:
 
 References: 
  https://docs.google.com/presentation/d/1VdMdoYOGhqjI6bJlz-ttNOXhISJTYJSJVckW05_i2NQ/edit#slide=id.gcb9a0b074_1_0 , https://github.com/ladeeluc/catstagram2.0, Nathan Hatch - Martinez(SE at Bouteous) - suggested best practices to manage project
+<<<<<<< Updated upstream
 
 Create a product backlog of a list of features to start adding.
+=======
+>>>>>>> Stashed changes
 
 1. Mock out additional possible views.
 2. Figure out what additional components we want to add.
