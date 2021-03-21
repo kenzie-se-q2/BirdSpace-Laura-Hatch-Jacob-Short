@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 // import FeedItem from '../views/FeedItem';
 import FeedItem from '../views/FeedItem';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import { useStore } from '../store/store';
 import BirdCard from '../components/BirdCard';
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

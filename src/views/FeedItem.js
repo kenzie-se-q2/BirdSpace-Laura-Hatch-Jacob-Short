@@ -14,6 +14,9 @@ const FeedItem = (props) => {
 =======
     const newUser = useContext(NewUserInfo);
     
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   return (
     <div className="feed-item">
