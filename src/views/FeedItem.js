@@ -8,8 +8,9 @@ import { birdPhotoRequest } from "../fetchRequests";
 
 const FeedItem = (props) => {
 
-    const newUser = useContext(NewUserInfo);
+    // const newUser = useContext(NewUserInfo);
     
+
 
   return (
     <div className="feed-item">

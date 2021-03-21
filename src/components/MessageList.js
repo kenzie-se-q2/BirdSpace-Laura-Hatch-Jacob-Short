@@ -41,10 +41,11 @@ const [messages, setMessages] = useState([])
     </>
   );
 }
-
 //const { results: [firstItem] } = data;
 // const { results: [firstItem] } = data;
 // // You could event destructure the content of this first array item like this
 // const { results: [{ gender, name }] } = data;
 // // or go deeper like this
 // const { results: [{ name: { title, first, last } }] } = data;
+// (found: object with keys {id, text, username, createdAt, likes}).
+// If you meant to render a collection of children, use an array instead
