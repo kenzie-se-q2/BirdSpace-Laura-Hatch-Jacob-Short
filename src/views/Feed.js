@@ -5,7 +5,7 @@ import FeedItem from '../views/FeedItem';
 import { useStore } from '../store/store';
 import BirdCard from '../components/BirdCard';
 
-const Feed = (props) => {
+const Feed = () => {
 
     return (
         <div className='feed'>

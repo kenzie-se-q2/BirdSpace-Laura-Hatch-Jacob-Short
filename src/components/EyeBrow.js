@@ -1,36 +1,58 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 export const EyeBrow = (props) => {
 	return (
+		<div class="container-fluid">
 		<div className="eye-brow">
 			<div class="container">
-				<div class="row align-items-start">
-					<div class="col" />
-					<div class="col">
-						<Link to="/">Home</Link>
-					</div>
-					<div class="col">
-						<Link to="/registration">Sign Up</Link>
-					</div>
-				</div>
-				<div class="row align-items-center">
-					<div class="col">
-						<Link to="/settings">Settings</Link>
-					</div>
-					<div class="col">
-						<Link to="">Sign Out</Link>
-					</div>
-					<div class="col">
-						<Link to="/profile">Profile</Link>
-					</div>
-				</div>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item active" aria-current="page">
+							<Link to="/">Home</Link>
+						</li>
+					</ol>
+				</nav>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="#">
+								<Link to="/">Home</Link>
+							</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							<Link to="/registration">Sign Up</Link>
+						</li>
+					</ol>
+				</nav>
+
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item">
+							<a href="#">
+								<Link to="/">Home</Link>
+							</a>
+						</li>
+						<li class="breadcrumb-item">
+							<a href="#">
+								<Link to="/registration">Sign Up</Link>
+							</a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							<Link to="/profile">Profile</Link>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">
+							<Link to="">Sign Out</Link>
+						</li>
+					</ol>
+				</nav>
 			</div>
+		</div>
 		</div>
 	);
 };
-
+//
 // cannot export this component as default
 
 // Plan for today :

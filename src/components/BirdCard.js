@@ -37,7 +37,7 @@ export const BirdCard = () => {
     <div className="birdcard">
       {birdPhotos && birdPhotos.map(photo => 
         <div>
-          <img classname="Image" alt="bird" src={photo.url} />
+          <img className="Image" alt="bird" src={photo.url} />
           <Likes />
         </div>)
       }

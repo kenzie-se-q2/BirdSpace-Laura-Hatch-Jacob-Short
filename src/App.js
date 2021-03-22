@@ -7,6 +7,7 @@ import MessageList from "./components/MessageList";
 import Settings from './views/Settings';
 import Feed from './views/Feed';
 import Profile from './views/Profile'
+import BirdCard from "./components/BirdCard";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/settings' component={Settings} />
         <Route path='/feed' component={Feed} />
         <Route path='/profile' component={Profile} />
+        <Route path='./BirdCard' component={BirdCard}/>
         <Route component={NotFound} />
       </Switch>
     </div>
