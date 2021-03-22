@@ -32,6 +32,7 @@ export default function Profile() {
     <>
       <Menu />
       <h1>This will be the user</h1>
+      <h1>{user.username}</h1>
       <form id="login-form" onSubmit={handleUpdated}>
         <label htmlFor="displayName">DisplayName</label>
         <input

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
 import { LOGIN, useStore } from "../store/store";
+import { Link } from 'react-router-dom';
 
 function Login(props){
   const dispatch = useStore((state) => state.dispatch);
@@ -44,7 +45,9 @@ function Login(props){
           required
           onChange={handleChange}
         />
+        <Link to='/feed'>
         <button type="submit">Login</button>
+        </Link>
       </form>
     </>
   );

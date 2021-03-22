@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Settings = (props) => {
     return (
@@ -24,7 +26,9 @@ const Settings = (props) => {
   </ol>
 </nav>
             <ul>
+              <Link to='/searchUser'>
                 <li>Search A User</li>
+              </Link>
                 <li>Edit Profile</li>
                 <li>FAQ's</li>
                 <li>Account Preferences</li>

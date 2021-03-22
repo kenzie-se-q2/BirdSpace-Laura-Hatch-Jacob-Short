@@ -45,6 +45,20 @@ export const patchUserRequest = (
   });
 };
 
+// export const searchUserRequest = (username) = > {
+//   return fetch(baseURL + "users/" + username, {
+//     method: 'GET', 
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+//       displayName,
+//       about,
+//     })
+//   }).then((res) => res.json())
+// };
+// this is not correct way to format this request, will adjust
+
 export const signUpRequest = (username, displayName, password) => {
   return fetch(baseURL + "users", {
     method: "POST",

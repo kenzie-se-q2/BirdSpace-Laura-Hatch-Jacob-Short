@@ -8,6 +8,7 @@ import Settings from './views/Settings';
 import Feed from './views/Feed';
 import Profile from './views/Profile'
 import BirdCard from "./components/BirdCard";
+import { searchUser } from "./components/searchUser";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/feed' component={Feed} />
         <Route path='/profile' component={Profile} />
         <Route path='./BirdCard' component={BirdCard}/>
+        <Route path='/searchUser' component={searchUser}/>
         <Route component={NotFound} />
       </Switch>
     </div>

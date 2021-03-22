@@ -10,10 +10,6 @@ const Feed = () => {
     return (
         <div className='feed'>
             
-            {/* {photos.map(bird =>
-                )} */}
-                {/* this will be my birdPhotoRequest */}
-                
                 <BirdCard/>
         </div>
     )
