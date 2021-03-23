@@ -3,7 +3,6 @@ import { useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
 
-
 export default function Profile() {
   const user = useStore((state) => state.user);
   const [formData, setFormData] = useState({
@@ -19,7 +18,7 @@ export default function Profile() {
   };
 
   const handleUpdated = (e) => {
-      e.preventdefault();
+    e.preventdefault();
     patchUserRequest(
       formData.displayName,
       formData.about,
@@ -32,9 +31,13 @@ export default function Profile() {
     <>
       <Menu />
       <h1>This will be the user</h1>
+<<<<<<< Updated upstream
       <h1>{user.username}</h1>
+=======
+      <br></br>
+>>>>>>> Stashed changes
       <form id="login-form" onSubmit={handleUpdated}>
-        <label htmlFor="displayName">DisplayName</label>
+        <label htmlFor="displayName">DisplayName</label>&#160;
         <input
           type="text"
           name="displayName"
@@ -43,15 +46,8 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
-        <label htmlFor="About">About</label>
-        <input
-          type="about"
-          name="about"
-          value={formData.about}
-          required
-          onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
+        &#160; &#160;
+        <label htmlFor="password">Password</label>&#160;
         <input
           type="password"
           name="password"
@@ -59,6 +55,20 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
+        <br></br>
+        <br></br>
+        <label htmlFor="About">About</label>&#160;
+        <input
+          type="about"
+          name="about"
+          size="60"
+          value={formData.about}
+          required
+          onChange={handleChange}
+        />
+        <br></br>
+        <br></br>
+        <div id="center"></div>
         <button type="submit">Update User</button>
       </form>
     </>
