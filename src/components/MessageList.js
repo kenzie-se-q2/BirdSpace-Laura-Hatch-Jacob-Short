@@ -23,7 +23,6 @@ const [messages, setMessages] = useState([])
   return (
     <>
       <Menu />
-      <h1>This is your message list!</h1>
       {messages.map(message => {
         return(
         <div style={{

@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import { useStore } from './store/store';
 import { EyeBrow } from "./components/EyeBrow";
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
@@ -12,6 +13,7 @@ import { searchUser } from "./components/searchUser";
 
 
 function App() {
+  const user = useStore((state) => state.user)
   return (
     <div className="App">
       <EyeBrow/>
@@ -31,11 +33,3 @@ function App() {
 }
 
 export default App;
-
-
-// git branch 
-// git pull
-// git add .
-// git commit -m""
-// git push
-

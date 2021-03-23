@@ -30,6 +30,7 @@ export default function Profile() {
   return (
     <>
       <Menu />
+<<<<<<< Updated upstream
       <h1>This will be the user</h1>
 <<<<<<< Updated upstream
       <br></br>
@@ -37,6 +38,15 @@ export default function Profile() {
       <h1>{user.username}</h1>
       <br></br>
 
+      <br></br>
+
+>>>>>>> Stashed changes
+=======
+      <h1>Welcome {user.username}!</h1>
+      {/* <img {user.picturelocation} /> */}
+      <h2>{user.displayName}</h2>
+      <h2>{user.about}</h2>
+      <br></br>
       <br></br>
 
 >>>>>>> Stashed changes
@@ -79,12 +89,3 @@ export default function Profile() {
   );
 }
 
-//  <h1>List of Hobbies</h1>
-// <h2>Jacob</h2>
-// <ul>
-//     <li>Football</li>
-//     <li>Gaming</li>
-//     <li>Coding</li>
-//     <li>Outside</li>
-//     <li>Learning</li>
-// </ul>
