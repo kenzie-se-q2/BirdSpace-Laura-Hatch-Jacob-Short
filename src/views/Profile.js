@@ -30,8 +30,8 @@ export default function Profile() {
   return (
     <>
       <Menu />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
+
       <h1>This will be the user</h1>
       <br></br>
       <h1>{user.username}</h1>
@@ -39,10 +39,7 @@ export default function Profile() {
 
       <br></br>
 
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
-=======
+
       <h1>Welcome {user.username}!</h1>
       {/* <img {user.picturelocation} /> */}
       <h2>{user.displayName}</h2>
@@ -50,16 +47,14 @@ export default function Profile() {
       <br></br>
       <br></br>
 
->>>>>>> Stashed changes
->>>>>>> 52ce071260c01454d39cf8a6a8a444326dee1dcd
-=======
+
       <h1>This will be the user</h1>
       <h1>{user.username}</h1>
       <br></br>
 
       <br></br>
 
->>>>>>> Stashed changes
+
       <form id="login-form" onSubmit={handleUpdated}>
         <label htmlFor="displayName">DisplayName</label>&#160;
         <input

@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 import React from "react";
 // import { Eyebrow } from '';
 import SignUp from "../components/SignUp";
@@ -37,24 +37,23 @@ export default Registration;
 // need to look into icons.
 
 // the button will go to <Feed/>
-=======
-import React from 'react';
-import { useStore } from '../store/store';
-import SignUp from '../components/SignUp';
+// import React from 'react';
+// import { useStore } from '../store/store';
+// import SignUp from '../components/SignUp';
 
 
-export const Registration = (props) => {
-        const user = useStore((state) => state.user)
-        console.log(user)
-    return (
-        <div className='registration'>
-            <>
-            <h1>Logo</h1>
-            <SignUp/>
-            </>
-        </div>
-    )
-}
+// export const Registration = (props) => {
+//         const user = useStore((state) => state.user)
+//         console.log(user)
+//     return (
+//         <div className='registration'>
+//             <>
+//             <h1>Logo</h1>
+//             <SignUp/>
+//             </>
+//         </div>
+//     )
+// }
 
-export default Registration;
->>>>>>> Stashed changes
+// export default Registration;
+// >>>>>>> Stashed changes

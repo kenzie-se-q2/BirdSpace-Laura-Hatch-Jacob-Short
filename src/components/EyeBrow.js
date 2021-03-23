@@ -3,31 +3,31 @@ import { Link } from "react-router-dom";
 
 export const EyeBrow = (props) => {
   return (
-    <div class="container-fluid">
+    <div className="container-fluid">
       <div className="eye-brow">
-        <div class="container">
+        <div className="container">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb background color:blue">
-              <li class="breadcrumb-item">
+            <ol className="breadcrumb background">
+              <li className="breadcrumb-item">
                 <a href="#">
                   <Link to="/">Home</Link>
                 </a>
               </li>
-              <li class="breadcrumb-item">
+              <li className="breadcrumb-item">
                 <a href="#">
                   <Link to="/registration">Sign Up</Link>
                 </a>
               </li>
-			  <li class="breadcrumb-item active" aria-current="page">
+			  <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/settings">Settings</Link>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">
+              <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/profile">Profile</Link>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">
+              <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/feed">Feed</Link>
               </li>
-              <li class="breadcrumb-item active" aria-current="page">
+              <li className="breadcrumb-item active" aria-current="page">
                 <Link to="">Sign Out</Link>
               </li>
             </ol>
@@ -63,42 +63,3 @@ export const EyeBrow = (props) => {
 
 // export default Navigation;
 
-{
-  /* <nav className='nav'>
-            {/* {<Link to='/'>Home</Link>} */
-}
-{
-  /* <Link to='/registration'>Sign Up</Link>
-            <Link to='/settings'>Settings</Link>
-            <Link to=''>Sign Out</Link>
-            <Link to='/profile'>Profile</Link> */
-}
-{
-  /* can do a ternary to conditionally render if logged in */
-}
-{
-  /* </nav> */
-}
-
-{
-  /* <nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item active" aria-current="page">
-							<Link to="/">Home</Link>
-						</li>
-					</ol>
-				</nav>
-
-				<nav aria-label="breadcrumb">
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item">
-							<a href="#">
-								<Link to="/">Home</Link>
-							</a>
-						</li>
-						<li class="breadcrumb-item active" aria-current="page">
-							<Link to="/registration">Sign Up</Link>
-						</li>
-					</ol>
-				</nav> */
-}
