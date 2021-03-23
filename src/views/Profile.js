@@ -31,15 +31,7 @@ export default function Profile() {
     <>
       <Menu />
       <h1>This will be the user</h1>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-      <h1>{user.username}</h1>
-=======
       <br></br>
->>>>>>> Stashed changes
-=======
-      <br></br>
->>>>>>> Stashed changes
       <form id="login-form" onSubmit={handleUpdated}>
         <label htmlFor="displayName">DisplayName</label>&#160;
         <input
