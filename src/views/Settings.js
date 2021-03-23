@@ -31,8 +31,6 @@ const Settings = (props) => {
               </Link>
                 <li>Edit Profile</li>
                 <li>FAQ's</li>
-                <li>Account Preferences</li>
-                <li>Delete Account</li>
             </ul>
         </div>
     )

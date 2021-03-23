@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { loginRequest } from "../fetchRequests";
 import { LOGIN, useStore } from "../store/store";
-import { Link } from 'react-router-dom';
 
-function Login(props){
+
+function Login(props) {
   const dispatch = useStore((state) => state.dispatch);
 
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ function Login(props){
     const inputName = e.target.name;
     const inputValue = e.target.value;
     setFormData((state) => ({ ...state, [inputName]: inputValue }));
-    //-----------------------------------^key--------^value 
+    //-----------------------------------^key--------^value
   };
 
   return (
@@ -45,12 +45,10 @@ function Login(props){
           required
           onChange={handleChange}
         />
-        <Link to='/feed'>
         <button type="submit">Login</button>
-        </Link>
       </form>
     </>
   );
-};
+}
 
 export default Login;

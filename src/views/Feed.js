@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
-// import FeedItem from '../views/FeedItem';
-import FeedItem from '../views/FeedItem';
-
 import { useStore } from '../store/store';
 import BirdCard from '../components/BirdCard';
 
-const Feed = () => {
-
+const Feed = (props) => {
+    const user = useStore((state) => state.user)
+    console.log(user)
     return (
         <div className='feed'>
-            
                 <BirdCard/>
         </div>
     )
@@ -17,5 +14,4 @@ const Feed = () => {
 
 export default Feed;
 
-// will need to import state from the sign up page. 
 

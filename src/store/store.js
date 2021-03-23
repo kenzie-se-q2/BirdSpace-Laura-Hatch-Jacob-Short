@@ -3,7 +3,7 @@ import { devtools, redux } from "zustand/middleware";
 
 // define the store's initial state
 const initialState = { user: { token: "" }, messages: [] };
-
+console.log(initialState)
 // set action types
 export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
