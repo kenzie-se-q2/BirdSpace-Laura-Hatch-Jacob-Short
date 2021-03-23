@@ -5,7 +5,6 @@ export default function Likes() {
 
 	function decrement() {
 		setLikesCount((prevCount) => (prevCount - 1 < 0 ? prevCount : prevCount - 1));
-        
 	}
 
 	function increment() {
@@ -14,18 +13,31 @@ export default function Likes() {
 
 	return (
 		<div className="likes">
-			<div class="card">
-				<div class="card-body">
-                    {/* {prevCount} */}
-			<span>{likesCount}</span>
-					<button className="inlineUnLikes" onClick={decrement}>
-						Unlike
-					</button>
-					<button className="inlineLikes" onClick={increment}>
-						Like
-					</button>
+			<div className="card laura-card">
+				<div className="card-body">
+					 <div className="likesCount d-flex justify-content-between" value={likesCount}>
+						<button
+							style={{
+								opacity: 1,
+							}}
+							className="unHappyClicks"
+							onClick={decrement}
+						>
+							Unlike
+						</button>
+						<span className="laura-counter">{likesCount}</span> 
+						<button
+							style={{
+								opacity: 1,
+							}}
+							className="happyClick"
+							onClick={increment}
+						>
+							Like
+						</button>
+					</div>
 				</div>
 			</div>
-		</div>
+	 </div>
 	);
 }

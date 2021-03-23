@@ -11,13 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.container-fluid{
-  
+
+.laura-card {
+  background-color: pink;
 }
-.container {
-  background-color: #e9e3de;
+
+.laura-counter {
+  background-color: burlywood;
+}
+
+/* .container {
+  background-color: #e4a16b;
   border: none;
-  color: white;
+  color: rgb(235, 103, 103);
   padding: 5px 8px;
   text-align: center;
   text-decoration: none;
@@ -28,9 +34,9 @@ code {
   align-content: center;
   justify-content: center;
   width: fit-content;
-}
+} */
 
-.Image{
+/* .Image{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -54,11 +60,28 @@ code {
   display: block;
   margin-left: 30;
   margin-right: auto;
-}
+} */
 
 /* .card-body{
-  display: block;
-  margin-left: 30;
+   display: block;
+  margin-left: auto;
   margin-right: auto;
   width: 20%;
+  
 } */
+
+/* .likesCount{
+  height: 300%;
+  text-align: center;
+  top:auto;
+  padding: 10px;
+  background-color: aquamarine;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+} */
+
+    
+ .unHappyClicks{
+
+ }

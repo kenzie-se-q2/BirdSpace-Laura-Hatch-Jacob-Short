@@ -33,14 +33,17 @@ export const BirdCard = () => {
   
   
   return (
-    
-    <div className="birdcard">
+    <div className="fluid-container bg-secondary d-flex flex-column align-items-center birdcard">
       {birdPhotos && birdPhotos.map(photo => 
-        <div>
-          <img className="Image" alt="bird" src={photo.url} />
+        <div className="card my-2" style={{
+          width: '18rem'
+        }}>
+        <img className="card-img-top" alt="bird" src={photo.url} />
+        <div className="card-body">
+          <h5 className="card-title">Pretty Birds</h5>
           <Likes />
-        </div>)
-      }
+        </div>
+      </div>)}
     </div>
   );
 };
