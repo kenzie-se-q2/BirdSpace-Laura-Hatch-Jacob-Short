@@ -7,6 +7,9 @@ import { useStore } from "../store/store";
 function Home(props) {
   const user = useStore((state) => state.user);
   return (
+    
+
+
     <>
     {/* <Switch> */}
       <Menu />
