@@ -7,7 +7,7 @@ export const EyeBrow = (props) => {
       <div className="eye-brow">
         <div class="container">
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb background color:blue">
               <li class="breadcrumb-item">
                 <a href="#">
                   <Link to="/">Home</Link>
