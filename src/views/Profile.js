@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useStore } from "../store/store";
+import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
 
@@ -24,8 +24,8 @@ export default function Profile() {
       formData.about,
       formData.password,
       user.username,
-      user.token
-    );
+      user.token,
+    ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData}));
   };
   return (
     <>
