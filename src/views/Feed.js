@@ -4,6 +4,8 @@ import { useStore } from '../store/store';
 import BirdCard from '../components/BirdCard';
 import { UrlUpload } from '../components/UrlUpload';
 
+
+
 const Feed = (props) => {
     const user = useStore((state) => state.user)
     console.log(user)
@@ -24,8 +26,10 @@ const Feed = (props) => {
     
     return (
         <div className='feed'>
+
+           
             <div className = "laura-feed">
-                < UrlUpload />              
+                < UrlUpload />             
                 <BirdCard/>
             </div>
         </div>

@@ -45,19 +45,19 @@ export const patchUserRequest = (
   });
 };
 
-// export const searchUserRequest = (username) = > {
-//   return fetch(baseURL + "users/" + username, {
-//     method: 'GET', 
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify({
-//       displayName,
-//       about,
-//     })
-//   }).then((res) => res.json())
-// };
-// this is not correct way to format this request, will adjust
+export const createMessageRequest = (message, token) => {
+  return fetch(baseURL + "messages", {
+    method: "POST",
+    headers: { 
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    body: JSON.stringify({
+      text: message,
+    }),
+  })
+}
+
 
 export const signUpRequest = (username, displayName, password) => {
   return fetch(baseURL + "users", {
@@ -81,8 +81,26 @@ export const birdPhotoRequest = () => {
   );
 };
 
-// can do specific county, region, or location
+// export const searchUserRequest = (username) = > {
+//   return fetch(baseURL + "users/" + username, {
+//     method: 'GET', 
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+//       displayName,
+//       about,
+//     })
+//   }).then((res) => res.json())
+// };
+// this is not correct way to format this request, will adjust
 
+
+
+
+
+
+/////ebird
 // The key should be included in a request header called "x-ebirdapitoken".
 // Alternatively, it can be included as a request parameter named 'key'.
 
