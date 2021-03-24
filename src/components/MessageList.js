@@ -31,6 +31,7 @@ export default function MessageList() {
     setNewMessage(e.target.value)
   };
 
+
   return (
     <>
       <Menu />
@@ -64,6 +65,18 @@ export default function MessageList() {
               <strong class="mr-auto">{message.username}</strong>
             </div>
             <div class="toast-body">{message.text}</div>
+      {messages.map(message => {
+        return(
+        <div style={{
+            opacity: 1,
+            marginTop: 16
+          }} class="toast" role="alert" aria-live="assertive" 
+          aria-atomic="true" data-autohide="false" data-show="true">
+          <div class="toast-header">
+            <strong class="mr-auto">{message.username}</strong>
+          </div>
+          <div class="toast-body">
+            {message.text}
           </div>
         );
       })}

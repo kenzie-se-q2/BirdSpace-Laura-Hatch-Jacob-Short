@@ -15,11 +15,53 @@ import { EditUser} from './components/EditUser';
 
 
 
-function App() {
+import React, {createContext, useState, useEffect} from 'react';
+//import  from './components/Header.js';
+//import HomePage from './pages/HomePage.js';
+import { UrlUpload } from "./components/urlUpload";
+
+export const PhotosContext = createContext()
+
+
+  function App() {
   const user = useStore((state) => state.user)
+    const [photos, setPhotos] = useState([])
+    const addPhoto = (url) => {
+        setPhotos((prevState) => {
+            const newPhoto = {
+                url: url,
+                likes: 0
+            }
+            return prevState.splice(0, 0, newPhoto)
+           
+        })
+    }
+
+    const url = " 'https://api.ebird.org/v2/data/obs/{{regionCode}}/recent";
+fetch(url, {
+  method: "GET",
+  headers: {
+    "X-Auth-Token": "38hl3jc5kjru"
+  }
+})
+
+    useEffect(() => {
+        fetch('https://api.ebird.org/v2/data/obs/{{regionCode}}/recent')
+            .then(response => response.json())
+            .then((data) => {
+                setPhotos(data.photos)
+            })
+    }, [])
+
   return (
     <div className="App">
       {user.token}
+        <PhotosContext.Provider value={{photos, addPhoto}} >
+            <div>
+                <UrlUpload />
+                {/* <HomePage /> */}
+            </div>
+        </PhotosContext.Provider>
       <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const Settings = (props) => {
     return (
       <div>
+        <div className='settings'>
             <ul>
               <Link to='/searchUser'>
                 <li>Search A User</li>

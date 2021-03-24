@@ -1,25 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+y;
 export const EyeBrow = (props) => {
   return (
     <div className="container-fluid">
       <div className="eye-brow">
-        <div className="container">
+        {/* <div className="container"> */}
+          <div className="laura-nav">
           <nav aria-label="breadcrumb">
-            <ol className="breadcrumb">
-              <li class="breadcrumb-item">
+
+            <ol className="breadcrumb m-0 background">
+              <li className="breadcrumb-item">
                 <a href="#">
-                  <Link to="/">Home</Link>
+                  <Link to="/">buttonHome</Link>
                 </a>
               </li>
               <li className="breadcrumb-item">
                 <a href="#">
                   <Link to="/registration">Sign Up</Link>
                 </a>
-              </li>
-			  <li className="breadcrumb-item active" aria-current="page">
-                <Link to="/settings">Settings</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/profile">Profile</Link>
@@ -34,7 +33,8 @@ export const EyeBrow = (props) => {
           </nav>
         </div>
       </div>
-    </div>
+     </div>
+    // </div>
   );
 };
 
@@ -62,4 +62,3 @@ export const EyeBrow = (props) => {
 // }
 
 // export default Navigation;
-
