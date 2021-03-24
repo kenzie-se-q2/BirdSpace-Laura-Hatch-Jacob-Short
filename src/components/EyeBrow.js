@@ -7,8 +7,8 @@ export const EyeBrow = (props) => {
       <div className="eye-brow">
         <div className="container">
           <nav aria-label="breadcrumb">
-            <ol className="breadcrumb background">
-              <li className="breadcrumb-item">
+            <ol className="breadcrumb">
+              <li class="breadcrumb-item">
                 <a href="#">
                   <Link to="/">Home</Link>
                 </a>

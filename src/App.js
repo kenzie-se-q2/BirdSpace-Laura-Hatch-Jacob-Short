@@ -7,15 +7,19 @@ import Registration from "./views/Registration";
 import MessageList from "./components/MessageList";
 import Settings from './views/Settings';
 import Feed from './views/Feed';
-import Profile from './views/Profile'
+import Profile from './views/Profile';
 import BirdCard from "./components/BirdCard";
 import { searchUser } from "./components/searchUser";
+import { FAQ } from  './components/FAQ';
+import { EditUser} from './components/EditUser';
+
 
 
 function App() {
   const user = useStore((state) => state.user)
   return (
     <div className="App">
+      {user.token}
       <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -26,6 +30,9 @@ function App() {
         <Route path='/profile' component={Profile} />
         <Route path='./BirdCard' component={BirdCard}/>
         <Route path='/searchUser' component={searchUser}/>
+        <Route path='/FAQ' component={FAQ}/>
+
+        {/* <Route path ='/EditUser' component={EditUser}/> */}
         <Route component={NotFound} />
       </Switch>
     </div>

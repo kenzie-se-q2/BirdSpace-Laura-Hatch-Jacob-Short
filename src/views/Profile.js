@@ -30,30 +30,10 @@ export default function Profile() {
   return (
     <>
       <Menu />
-
-
-      <h1>This will be the user</h1>
-      <br></br>
-      <h1>{user.username}</h1>
-      <br></br>
-
-      <br></br>
-
-
       <h1>Welcome {user.username}!</h1>
       {/* <img {user.picturelocation} /> */}
       <h2>{user.displayName}</h2>
       <h2>{user.about}</h2>
-      <br></br>
-      <br></br>
-
-
-      <h1>This will be the user</h1>
-      <h1>{user.username}</h1>
-      <br></br>
-
-      <br></br>
-
 
       <form id="login-form" onSubmit={handleUpdated}>
         <label htmlFor="displayName">DisplayName</label>&#160;

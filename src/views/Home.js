@@ -6,7 +6,6 @@ import { useStore } from "../store/store";
 function Home(props) {
   const user = useStore((state) => state.user);
   return (
-
     <>
       <Menu />
       <h2>Sign in to check out some of the coolest trending topics today!</h2>
@@ -16,6 +15,8 @@ function Home(props) {
 }
 
 export default Home;
+
+
 
 
 
