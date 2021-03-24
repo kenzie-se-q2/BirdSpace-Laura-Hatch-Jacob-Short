@@ -12,6 +12,7 @@ import BirdCard from "./components/BirdCard";
 import { searchUser } from "./components/searchUser";
 
 
+
 function App() {
   const user = useStore((state) => state.user)
   return (

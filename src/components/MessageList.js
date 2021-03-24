@@ -10,12 +10,9 @@ const [messages, setMessages] = useState([])
   useEffect(() => {
 
     messagesRequest().then((data) => {
-      console.log( "ths is an object", data)
-      //const list = data.messages.map(t => t)
-      //console.log(list) 
-      //const { count: [{ messages { id, text, username } }] } = data
+      //console.log( "ths is an object", data)
       setMessages(data.messages)
-      console.log(" this is a key value" + data.messages)
+      //console.log(" this is a key value" + data.messages)
     }) 
   }, [])
   
@@ -28,7 +25,8 @@ const [messages, setMessages] = useState([])
         <div style={{
             opacity: 1,
             marginTop: 16
-          }} class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" data-show="true">
+          }} class="toast" role="alert" aria-live="assertive" 
+          aria-atomic="true" data-autohide="false" data-show="true">
           <div class="toast-header">
             <strong class="mr-auto">{message.username}</strong>
           </div>

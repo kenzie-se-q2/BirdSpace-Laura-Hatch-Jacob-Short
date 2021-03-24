@@ -2,6 +2,8 @@ import React from "react";
 // import dataInfo from '../assets/data.json'
 import Likes from '../components/Likes';
 
+
+
 export const BirdCard = () => {
   
     const birdPhotos = [
@@ -33,10 +35,12 @@ export const BirdCard = () => {
   
   
   return (
+        
+    <>
     <div className="fluid-container bg-secondary d-flex flex-column align-items-center birdcard">
       {birdPhotos && birdPhotos.map(photo => 
         <div className="card my-2" style={{
-          width: '30rem'
+          width: '18rem'
         }}>
         <img className="card-img-top" alt="bird" src={photo.url} />
         <div className="card-body">
@@ -45,6 +49,7 @@ export const BirdCard = () => {
         </div>
       </div>)}
     </div>
+          </>
   );
 };
 
