@@ -7,6 +7,21 @@ import { UrlUpload } from '../components/UrlUpload';
 const Feed = (props) => {
     const user = useStore((state) => state.user)
     console.log(user)
+    export const UrlUpload = (props) => {
+        const {addPhoto} = useContext(PhotosContext)
+        const [url, setUrl] = useState('');
+    
+        const handleChange = (e) =>
+            setUrl(e.target.value);
+    
+        const handleSubmit = (e) => {
+            e.preventDefault();
+    
+            addPhoto(url)
+    
+            setUrl('')
+        }
+    
     return (
         <div className='feed'>
             <div className = "laura-feed">
