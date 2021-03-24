@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+y;
 export const EyeBrow = (props) => {
   return (
     <div className="container-fluid">
@@ -10,7 +10,7 @@ export const EyeBrow = (props) => {
             <ol className="breadcrumb background">
               <li className="breadcrumb-item">
                 <a href="#">
-                  <Link to="/">Home</Link>
+                  <Link to="/">buttonHome</Link>
                 </a>
               </li>
               <li className="breadcrumb-item">
@@ -18,7 +18,7 @@ export const EyeBrow = (props) => {
                   <Link to="/registration">Sign Up</Link>
                 </a>
               </li>
-			  <li className="breadcrumb-item active" aria-current="page">
+              <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/settings">Settings</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
@@ -62,4 +62,3 @@ export const EyeBrow = (props) => {
 // }
 
 // export default Navigation;
-
