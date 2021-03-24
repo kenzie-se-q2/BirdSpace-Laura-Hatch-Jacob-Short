@@ -16,6 +16,33 @@ code {
   background-color: pink;
 }
 
-.laura-counter {
-  background-color: rgb(231, 183, 121);
+.laura-url{
+  width: 100%;
 }
+
+.laura-nav{
+  background-color:  rgb(156, 245, 215);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.laura-feed{
+  background-color:  rgb(156, 245, 215); 
+}
+
+.container-fluid{
+  padding: 0%;
+}
+
+.card-body{
+  background-color: rgb(251, 246, 226);
+}
+
+.breadcrumb .background{
+ background-color:  rgb(156, 245, 215);
+}
+
+/* .laura-counter {
+  
+  background-color: rgb(231, 183, 121);
+} */
