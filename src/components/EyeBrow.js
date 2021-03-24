@@ -5,9 +5,10 @@ export const EyeBrow = (props) => {
   return (
     <div className="container-fluid">
       <div className="eye-brow">
-        <div className="container">
+        {/* <div className="container"> */}
+          <div className="laura-nav">
           <nav aria-label="breadcrumb">
-            <ol className="breadcrumb background">
+            <ol className="breadcrumb m-0 background">
               <li className="breadcrumb-item">
                 <a href="#">
                   <Link to="/">buttonHome</Link>
@@ -17,9 +18,6 @@ export const EyeBrow = (props) => {
                 <a href="#">
                   <Link to="/registration">Sign Up</Link>
                 </a>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-                <Link to="/settings">Settings</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/profile">Profile</Link>
@@ -34,7 +32,8 @@ export const EyeBrow = (props) => {
           </nav>
         </div>
       </div>
-    </div>
+     </div>
+    // </div>
   );
 };
 
