@@ -31,7 +31,6 @@ const SignUp = (props) => {
     <>
       <h1>Registration Page</h1>
       <form id="signup-form" onSubmit={handleSignUp}>
-
         <label htmlFor="username">Username</label>
         <input
           type="text"
@@ -59,6 +58,7 @@ const SignUp = (props) => {
         />
           <button type="submit">Sign Up</button>
       </form>   
+
 
     </>
   );

@@ -27,6 +27,9 @@ export const EyeBrow = (props) => {
                 <Link to="/feed">Feed</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
+                <Link to="/messages">Messages</Link>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
                 <Link to="">Sign Out</Link>
               </li>
             </ol>

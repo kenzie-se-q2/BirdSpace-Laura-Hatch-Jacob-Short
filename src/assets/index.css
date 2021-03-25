@@ -21,7 +21,7 @@ code {
 }
 
 .laura-nav{
-  background-color:  rgb(156, 245, 215);
+  background-color:  rgb(145, 192, 176);
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -41,6 +41,18 @@ code {
 .breadcrumb .background{
  background-color:  rgb(156, 245, 215);
 }
+
+.container-xxl{
+  background-color: rgb(170, 190, 133);
+  object-fit:fill;
+  padding: 0%;
+}
+
+.img-fluid{
+  width: 100%;
+  
+}
+
 
 /* .laura-counter {
   
