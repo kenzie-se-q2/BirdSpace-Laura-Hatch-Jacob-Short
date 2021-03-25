@@ -1,23 +1,43 @@
 
-import React from "react";
-// import { Eyebrow } from '';
-import SignUp from "../components/SignUp";
+import React from 'react';
+import { useStore } from '../store/store';
+import SignUp from '../components/SignUp';
+
 
 export const Registration = (props) => {
-  return (
-    <div className="registration">
-      <>
-        {/* <Eyebrow/> */}
-        <h1>Logo</h1>
-        {/* will have our logo somehwere on this page  */}
-        <h2>Start off by confirming your age!</h2>
-        <SignUp />
-      </>
-    </div>
-  );
-};
+        const user = useStore((state) => state.user)
+        console.log(user)
+    return (
+        <div className='registration'>
+            <>
+            <h1>Logo</h1>
+            <SignUp/>
+            </>
+        </div>
+    )
+}
 
 export default Registration;
+
+// import React from "react";
+// // import { Eyebrow } from '';
+// import SignUp from "../components/SignUp";
+
+// export const Registration = (props) => {
+//   return (
+//     <div className="registration">
+//       <>
+//         {/* <Eyebrow/> */}
+//         <h1>Logo</h1>
+//         {/* will have our logo somehwere on this page  */}
+//         <h2>Start off by confirming your age!</h2>
+//         <SignUp />
+//       </>
+//     </div>
+//   );
+// };
+
+// export default Registration;
 
 // This component will be a the Route from clicking the Sign up button
 // on the Home view.
@@ -37,23 +57,3 @@ export default Registration;
 // need to look into icons.
 
 // the button will go to <Feed/>
-// import React from 'react';
-// import { useStore } from '../store/store';
-// import SignUp from '../components/SignUp';
-
-
-// export const Registration = (props) => {
-//         const user = useStore((state) => state.user)
-//         console.log(user)
-//     return (
-//         <div className='registration'>
-//             <>
-//             <h1>Logo</h1>
-//             <SignUp/>
-//             </>
-//         </div>
-//     )
-// }
-
-// export default Registration;
-// >>>>>>> Stashed changes
