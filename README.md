@@ -14,9 +14,7 @@ Team Members:
 
 References: 
  https://docs.google.com/presentation/d/1VdMdoYOGhqjI6bJlz-ttNOXhISJTYJSJVckW05_i2NQ/edit#slide=id.gcb9a0b074_1_0 , https://github.com/ladeeluc/catstagram2.0, Nathan Hatch - Martinez(SE at Bouteous) - suggested best practices to manage project
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 
 Create a product backlog of a list of features to start adding.
 
@@ -30,6 +28,3 @@ Create a product backlog of a list of features to start adding.
 7. The API will include endpoints relating to authentication, users, messages, and likes.
    Your project must incorporate a majority of the endpoints given in the API.
 
-Components To Be Added:
--Header, Footer, SideBar, Feed.
-eric was here
