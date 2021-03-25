@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-//import dataInfo from '../assets/data.json'
+
 import Likes from '../components/Likes';
 
 
@@ -36,24 +36,23 @@ export const BirdCard = () => {
 
 
         const handleSubmit = (e) => {
-          console.log(" this is the event" ,e)
-          console.log("this is state", newInput )
+          e.preventDefault()
           setBirdPhotos([{
             id:0,
             url:newInput
           },...birdPhotos]) 
-          e.preventDefault()
+          setNewInput("")
 
         }
             const handleNewInputChange = (e) => {
               setNewInput(e.target.value)
           
             }
-          // method to append this => birdPhoto[]
+        
 
-useEffect(() => {
-  console.log(" this is run every time state of birdphotos change",birdPhotos)
-},[birdPhotos])
+// useEffect(() => {
+//   console.log(" this is run every time state of birdphotos change",birdPhotos)
+// },[birdPhotos])
 
 
   
@@ -70,7 +69,7 @@ useEffect(() => {
   </div>
   <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
               value={newInput}
-              onChange={handleNewInputChange} />
+              onChange={handleNewInputChange}/>
   
   
   
