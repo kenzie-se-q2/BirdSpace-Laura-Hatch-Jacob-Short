@@ -28,7 +28,7 @@ function Login(props) {
   return (
 
 <>
-
+<div class="container">
 <form id="login-form" onSubmit={handleLogin}>                        
   <div className="form-group">
     <label for="username">Username</label>
@@ -53,6 +53,7 @@ function Login(props) {
     Submit
   </button>
 </form>
+</div>
 </>
   );
 }
