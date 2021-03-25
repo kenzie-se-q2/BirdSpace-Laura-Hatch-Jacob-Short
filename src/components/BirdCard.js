@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import Likes from '../components/Likes';
 
 
@@ -49,38 +48,27 @@ export const BirdCard = () => {
           
             }
         
-
-// useEffect(() => {
-//   console.log(" this is run every time state of birdphotos change",birdPhotos)
-// },[birdPhotos])
-
-
   
   return (
-        
-  <>
-     <form className="ImageUploaderForm">
-          
-                
+    <> 
+  <div>                       
+      <div className="input-group input-group-sm mb-3">
             
-            <div class="input-group input-group-sm mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-sm">Type url image address</span>
-  </div>
-  <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm"
-              value={newInput}
-              onChange={handleNewInputChange}/>
-  
-  
-  
-</div>
+                <span className="input-group-text" id="inputGroup-sizing-sm">Type url image address</span>
+                <input type="text" className="form-control" aria-label="Small" 
+                    aria-describedby="inputGroup-sizing-sm"
+                    value={newInput}
+                    onChange={handleNewInputChange}/>         
+      </div>
+                <button type="button" className="btn btn-outline-primary"
+                     onClick={handleSubmit}>
+                      SUBMIT
+                </button>
+    
+                       {/* <button type="button" class="btn btn-outline-primary" */}
               
+                      
            
-            <button type="button" class="btn btn-outline-primary"
-            className="SubmitButton" onClick={handleSubmit}>
-              SUBMIT
-            </button>
-        </form>
 
     <div className="fluid-container bg-secondary d-flex flex-column align-items-center birdcard">
       {birdPhotos && birdPhotos.map(photo => 
@@ -94,8 +82,17 @@ export const BirdCard = () => {
         </div>
       </div>)}
     </div>
+    </div>
   </>
   );
 };
 
 export default BirdCard;
+
+{/* <input type="text" class="form-control" aria-label="Small" 
+aria-describedby="inputGroup-sizing-sm"
+value={newInput}
+onChange={handleNewInputChange}/>
+*/}
+{/* </form> */}
+{/* <form className="ImageUploaderForm"> */}

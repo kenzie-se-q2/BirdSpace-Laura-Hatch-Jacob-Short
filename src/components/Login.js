@@ -26,28 +26,34 @@ function Login(props) {
   };
 
   return (
-    <>
-      <form id="login-form" onSubmit={handleLogin}>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          name="username"
-          value={formData.username}
-          autoFocus
-          required
-          onChange={handleChange}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          required
-          onChange={handleChange}
-        />
-        <button type="submit">Login</button>
-      </form>
-    </>
+
+<>
+
+<form id="login-form" onSubmit={handleLogin}>                        
+  <div className="form-group">
+    <label for="username">Username</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username"
+    type="text"
+    name="username"
+    value={formData.username}
+    autoFocus
+    required
+    onChange={handleChange}/>
+  </div>
+  <div className="form-group">
+    <label for="exampleInputPassword1">Password</label>
+  <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"
+     type="password"
+     name="password"
+     value={formData.password}
+     required
+     onChange={handleChange}/>
+</div>
+  <button type="submit" className="btn btn-primary" id= "login-form" onSubmit={handleLogin}>
+    Submit
+  </button>
+</form>
+</>
   );
 }
 

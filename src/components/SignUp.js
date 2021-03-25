@@ -62,7 +62,6 @@ const SignUp = (props) => {
                 <button type="submit">Sign Up</button>
                 {/* </Link> */}
             </form>
->>>>>>> Stashed changes
     </>
   );
 };

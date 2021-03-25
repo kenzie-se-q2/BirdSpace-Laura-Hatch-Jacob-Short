@@ -14,9 +14,8 @@ function Menu(props) {
 
   return (
     <div id="menu">
-      <h1>Bird Space</h1>
       <div id="menu-links">
-        <Link to="/messages">Messages</Link>
+        {/* <Link to="/messages">Messages</Link> */}
         {user.token && <button onClick={logout}>Logout</button>}
       </div>
     </div>
