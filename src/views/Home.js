@@ -13,9 +13,9 @@ function Home(props) {
 
     <>
     <div className="container-xxl">
-      <Menu/>
-    <img src={image} class="img-fluid" alt="Logo for birdspace bottom-margin: "></img> 
       {!user.token && <Login />}
+      <Menu/>
+    <img src={image} class="img-fluid" alt="Logo for birdspace"></img> 
   </div>
     </>
   );

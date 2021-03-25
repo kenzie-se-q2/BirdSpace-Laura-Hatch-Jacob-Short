@@ -30,10 +30,12 @@ const SignUp = (props) => {
 
   return (
     <>
-      <h1>Registration Page</h1>
+    <div container>
+      <h7>Sign up here</h7>
       <form id="signup-form" onSubmit={handleSignUp}>
 
                 <label htmlFor="username">Username</label>
+
                 <input
                     type="text"
                     name="username"
@@ -62,6 +64,7 @@ const SignUp = (props) => {
                 <button type="submit">Sign Up</button>
                 {/* </Link> */}
             </form>
+            </div>
     </>
   );
 };

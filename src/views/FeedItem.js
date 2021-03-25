@@ -14,8 +14,6 @@ const FeedItem = (props) => {
 
   return (
     <div className="feed-item">
-      <h1>This will display the feed</h1>
-      
     </div>
   );
 };

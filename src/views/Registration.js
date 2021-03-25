@@ -2,18 +2,17 @@
 import React from "react";
 // import { Eyebrow } from '';
 import SignUp from "../components/SignUp";
-
+import image from '../assets/Images/birdhome1.PNG'
 export const Registration = (props) => {
   return (
-    <div className="registration">
       <>
-        {/* <Eyebrow/> */}
-        <h1>Logo</h1>
-        {/* will have our logo somehwere on this page  */}
-        <h2>Start off by confirming your age!</h2>
+    <div className="container-xxl" >
+    <div className="laura-reg">
         <SignUp />
-      </>
+    <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
     </div>
+    </div>
+      </>
   );
 };
 
@@ -46,7 +45,7 @@ export default Registration;
 //         const user = useStore((state) => state.user)
 //         console.log(user)
 //     return (
-//         <div className='registration'>
+//         <div classNameName='registration'>
 //             <>
 //             <h1>Logo</h1>
 //             <SignUp/>

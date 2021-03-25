@@ -54,8 +54,14 @@ code {
   
 }
 
+.laura-reg{
+  background-color: paleturquoise;
+}
 
-/* .laura-counter {
-  
-  background-color: rgb(231, 183, 121);
-} */
+.img-thumbnail{
+  background-color: paleturquoise ;
+}
+
+.badge .bg-primary .text-wrap{
+margin-top: auto;
+}

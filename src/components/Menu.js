@@ -15,8 +15,8 @@ function Menu(props) {
   return (
     <div id="menu">
       <div id="menu-links">
-        {/* <Link to="/messages">Messages</Link> */}
-        {user.token && <button onClick={logout}>Logout</button>}
+        {user.token && <button type="button" className="btn btn-outline-primary" 
+        onClick={logout}>Logout</button>}
       </div>
     </div>
   );
