@@ -10,7 +10,6 @@ import image from '../assets/Images/birdhome1.PNG'
 function Home(props) {
   const user = useStore((state) => state.user);
   return (
-
     <>
     <div className="container-xxl">
       {!user.token && <Login />}
@@ -22,6 +21,8 @@ function Home(props) {
 }
 
 export default Home;
+
+
 
 
 

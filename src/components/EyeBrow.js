@@ -8,6 +8,7 @@ export const EyeBrow = (props) => {
         {/* <div className="container"> */}
           <div className="laura-nav">
           <nav aria-label="breadcrumb">
+
             <ol className="breadcrumb m-0 background">
               <li className="breadcrumb-item">
                 <a href="#">
@@ -18,9 +19,6 @@ export const EyeBrow = (props) => {
                 <a href="#">
                   <Link to="/registration">Sign Up</Link>
                 </a>
-                  </li>
-			            <li className="breadcrumb-item active" aria-current="page">
-                  <Link to="/settings">Settings</Link>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/profile">Profile</Link>
@@ -67,4 +65,3 @@ export const EyeBrow = (props) => {
 // }
 
 // export default Navigation;
-

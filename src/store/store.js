@@ -9,7 +9,7 @@ export const LOGIN = "LOGIN";
 export const LOGOUT = "LOGOUT";
 export const SIGN_UP = "SIGN_UP";
 export const GET_MESSAGES = "GET_MESSAGES";
-export const POST_MESSAGES = "POST_MESSAGES";
+export const POST_MESSAGE = "POST_MESSAGE";
 export const PATCH_USER = "PATCH_USER";
 
 // define reducer function
@@ -23,7 +23,7 @@ const reducer = (state, action) => {
       return { user: action.payload };
     case GET_MESSAGES:
       return { messages: action.payload};
-    case POST_MESSAGES:
+    case POST_MESSAGE:
       return state;
     case PATCH_USER:
       return state;
