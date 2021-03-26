@@ -12,7 +12,7 @@ import BirdCard from "./components/BirdCard";
 import { searchUser } from "./components/searchUser";
 import { FAQ } from  './components/FAQ';
 import { EditUser} from './components/EditUser';
-
+import  User  from './components/User'
 
 
 import React, {createContext, useState, useEffect} from 'react';
@@ -40,6 +40,7 @@ function App() {
         <Route path='/searchUser' component={searchUser}/>
         <Route path='/FAQ' component={FAQ}/>
         <Route path='/userlist' component={UserList}/>
+        <Route path='/user' component={User}/>
         <Route component={NotFound} />
       </Switch>
     </div>

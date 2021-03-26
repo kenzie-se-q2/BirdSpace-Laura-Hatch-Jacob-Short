@@ -13,6 +13,7 @@ const SignUp = (props) => {
   });
 
   const handleSignUp = (e) => {
+    e.preventDefault();
     signUpRequest(
       createUserData.username,
       createUserData.displayName,

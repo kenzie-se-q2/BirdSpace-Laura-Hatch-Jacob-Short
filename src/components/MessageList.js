@@ -31,7 +31,6 @@ export default function MessageList() {
     setNewMessage(e.target.value)
   };
 
-
   return (
     <>
       <div className='container-xxl'>
