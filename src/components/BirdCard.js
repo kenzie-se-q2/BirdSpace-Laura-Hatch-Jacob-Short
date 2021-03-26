@@ -100,7 +100,7 @@ export const BirdCard = () => {
         }}>
         <img className="card-img-top" alt="bird" src={photo.url} />
     <div className="card-body">
-          <span className="card-title">{user.username}</span>
+          <span className="card-title">Welcome to Bird Space  {user.username}</span>
           <Likes />
         </div>
       </div>)}
