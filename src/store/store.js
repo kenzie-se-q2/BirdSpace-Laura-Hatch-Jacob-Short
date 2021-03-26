@@ -11,6 +11,7 @@ export const SIGN_UP = "SIGN_UP";
 export const GET_MESSAGES = "GET_MESSAGES";
 export const POST_MESSAGE = "POST_MESSAGE";
 export const PATCH_USER = "PATCH_USER";
+export const GET_USER = "GET_USER";
 
 // define reducer function
 const reducer = (state, action) => {
@@ -26,6 +27,8 @@ const reducer = (state, action) => {
     case POST_MESSAGE:
       return state;
     case PATCH_USER:
+      return state;
+    case GET_USER:
       return state;
     default:
       return state;
