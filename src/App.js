@@ -24,7 +24,9 @@ function App() {
   const user = useStore((state) => state.user)
 
   return (
+
     <div className="App">
+      <div className='container-xxl'>
       <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -36,10 +38,9 @@ function App() {
         <Route path='./BirdCard' component={BirdCard}/>
         <Route path='/searchUser' component={searchUser}/>
         <Route path='/FAQ' component={FAQ}/>
-
-        {/* <Route path ='/EditUser' component={EditUser}/> */}
         <Route component={NotFound} />
       </Switch>
+    </div>
     </div>
 
   );

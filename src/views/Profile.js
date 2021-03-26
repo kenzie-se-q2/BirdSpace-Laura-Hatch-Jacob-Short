@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
+import image from '../assets/Images/birdhome1.PNG'
 
 export default function Profile() {
   const user = useStore((state) => state.user);
@@ -29,14 +30,14 @@ export default function Profile() {
   };
   return (
     <>
+    <div className='container-xxl'>
       <Menu />
       <h1>Welcome {user.username}!</h1>
-      {/* <img {user.picturelocation} /> */}
       <h2>{user.displayName}</h2>
       <h2>{user.about}</h2>
 
       <form id="login-form" onSubmit={handleUpdated}>
-        <label htmlFor="displayName">DisplayName</label>&#160;
+        <label htmlFor="displayName">DisplayName</label>
         <input
           type="text"
           name="displayName"
@@ -45,8 +46,8 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
-        &#160; &#160;
-        <label htmlFor="password">Password</label>&#160;
+       
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           name="password"
@@ -54,22 +55,16 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
-        <label htmlFor="About">About</label>&#160;
+        <label htmlFor="About">About</label>
         <input
-          type="about"
-          name="about"
-          size="60"
           value={formData.about}
           required
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
-        <div id="center"></div>
         <button type="submit">Update User</button>
+        <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
       </form>
+      </div>
     </>
   );
 }

@@ -34,6 +34,7 @@ export default function MessageList() {
 
   return (
     <>
+      <div className='container-xxl'>
       <Menu />
       <form id="new-message" onSubmit={handleCreateMessage}>
         <label htmlFor="">New Message</label>
@@ -43,10 +44,11 @@ export default function MessageList() {
           value={newMessage}
           autoFocus
           required 
-          onChange={handleChange}
-        />
+          onChange={handleChange}/>
         <button type='submit'>POST</button>
+        <div/>
       </form>
+      </div>
       {messages.map((message) => {
         return (
           <div
@@ -68,14 +70,6 @@ export default function MessageList() {
           </div>
           )
         })}
-    </>
+        </>
   );
 }
-//const { results: [firstItem] } = data;
-// const { results: [firstItem] } = data;
-// // You could event destructure the content of this first array item like this
-// const { results: [{ gender, name }] } = data;
-// // or go deeper like this
-// const { results: [{ name: { title, first, last } }] } = data;
-// (found: object with keys {id, text, username, createdAt, likes}).
-// If you meant to render a collection of children, use an array instead
