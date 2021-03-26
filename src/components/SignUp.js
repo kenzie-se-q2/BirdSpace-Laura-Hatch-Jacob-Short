@@ -13,7 +13,6 @@ const SignUp = (props) => {
   });
 
   const handleSignUp = (e) => {
-    e.preventDefault();
     signUpRequest(
       createUserData.username,
       createUserData.displayName,
@@ -67,4 +66,30 @@ const SignUp = (props) => {
 
 export default SignUp;
 
-
+// <label htmlFor="username">Username</label>
+// <input
+//     type="text"
+//     name="username"
+//     value={createUserData.username}
+//     autoFocus
+//     required
+//     onChange={handleChange}
+// />
+// <label htmlFor="displayName">Display Name</label>
+// <input 
+//     type="text"
+//     name="displayName"
+//     value={createUserData.displayName}
+//     required
+//     onChange={handleChange}
+// />
+// <label htmlFor="password">Password</label>
+//  <input
+//     type="password"
+//     name="password"
+//     value={createUserData.password}
+//     required
+//     onChange={handleChange}
+// />
+// <button type="submit">Sign Up</button>
+// </form>

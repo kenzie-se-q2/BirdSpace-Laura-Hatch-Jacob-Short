@@ -12,11 +12,10 @@ import BirdCard from "./components/BirdCard";
 import { searchUser } from "./components/searchUser";
 import { FAQ } from  './components/FAQ';
 import { EditUser} from './components/EditUser';
-import  User  from './components/User'
+
 
 
 import React, {createContext, useState, useEffect} from 'react';
-import UserList from "./views/UserList";
 
 
 
@@ -25,9 +24,7 @@ function App() {
   const user = useStore((state) => state.user)
 
   return (
-
     <div className="App">
-      <div className='container-xxl'>
       <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -39,11 +36,10 @@ function App() {
         <Route path='./BirdCard' component={BirdCard}/>
         <Route path='/searchUser' component={searchUser}/>
         <Route path='/FAQ' component={FAQ}/>
-        <Route path='/userlist' component={UserList}/>
-        <Route path='/user' component={User}/>
+
+        {/* <Route path ='/EditUser' component={EditUser}/> */}
         <Route component={NotFound} />
       </Switch>
-    </div>
     </div>
 
   );

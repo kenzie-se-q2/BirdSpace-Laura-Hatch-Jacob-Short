@@ -81,74 +81,21 @@ export const birdPhotoRequest = () => {
   );
 };
 
-
-export const UserRequest = (
-  username, token
-) => {
-  return fetch(baseURL + `users/ + ${username}`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json"
-    },
-  }).then((res) => res.json());
-};
-
-export const manyUsersRequest = (
-  token
-) => {
-  return fetch(baseURL + "users", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + token,
-    },
-  }).then((res) => res.json());
-};
-
-export const putPhotoRequest = (token, username, pictureData) => {
-  let formData = new FormData()
-  formData.append("picture", pictureData)
-  return fetch(baseURL + `users/${username}/picture`, {
-    method: 'PUT',
-    headers: {
-      Authorization: "Bearer" + token,
-    },
-    body: formData,
-  }).then((res) => res.json())
-}
-
-export const deleteUserInput = (token, username) => {
-  return fetch(baseURL + `users/${username}`, {
-    method: "DELETE",
-    headers: {
-      Authorization: "bearer" + token,
-    }
-  })
-}
-export const deleteMessageRequest = (id, token) => {
-  return fetch(baseURL + "messaages/" + id, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: "Bearer " + token,
-    },
-    body: JSON.stringify({
-      id,
-    }),
-  });
-};
-
-// export const setUserPicture = (user, photo) => {
-//   const data = new FormData()
-//   data.append("picture", photo)
-//   return fetch(`${baseURL}users/${user.username}/picture`,{
-//     method: "PUT",
+// export const searchUserRequest = (username) = > {
+//   return fetch(baseURL + "users/" + username, {
+//     method: 'GET', 
 //     headers: {
-//       Authorization: "Bearer" + user.token,
+//       "Content-Type": "application/json"
 //     },
-//     body: data
+//     body: JSON.stringify({
+//       displayName,
+//       about,
+//     })
 //   }).then((res) => res.json())
-// }
+// };
+// this is not correct way to format this request, will adjust
+
+
 
 
 
