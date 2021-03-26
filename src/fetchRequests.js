@@ -81,6 +81,7 @@ export const birdPhotoRequest = () => {
   );
 };
 
+
 export const UserRequest = (
   username, token
 ) => {
@@ -92,21 +93,62 @@ export const UserRequest = (
   }).then((res) => res.json());
 };
 
-// export const searchUserRequest = (username) = > {
-//   return fetch(baseURL + "users/" + username, {
-//     method: 'GET', 
+export const manyUsersRequest = (
+  token
+) => {
+  return fetch(baseURL + "users", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  }).then((res) => res.json());
+};
+
+export const putPhotoRequest = (token, username, pictureData) => {
+  let formData = new FormData()
+  formData.append("picture", pictureData)
+  return fetch(baseURL + `users/${username}/picture`, {
+    method: 'PUT',
+    headers: {
+      Authorization: "Bearer" + token,
+    },
+    body: formData,
+  }).then((res) => res.json())
+}
+
+export const deleteUserInput = (token, username) => {
+  return fetch(baseURL + `users/${username}`, {
+    method: "DELETE",
+    headers: {
+      Authorization: "bearer" + token,
+    }
+  })
+}
+export const deleteMessageRequest = (id, token) => {
+  return fetch(baseURL + "messaages/" + id, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+    body: JSON.stringify({
+      id,
+    }),
+  });
+};
+
+// export const setUserPicture = (user, photo) => {
+//   const data = new FormData()
+//   data.append("picture", photo)
+//   return fetch(`${baseURL}users/${user.username}/picture`,{
+//     method: "PUT",
 //     headers: {
-//       "Content-Type": "application/json"
+//       Authorization: "Bearer" + user.token,
 //     },
-//     body: JSON.stringify({
-//       displayName,
-//       about,
-//     })
+//     body: data
 //   }).then((res) => res.json())
-// };
-// this is not correct way to format this request, will adjust
-
-
+// }
 
 
 

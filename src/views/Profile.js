@@ -37,7 +37,7 @@ export default function Profile() {
       formData.password,
       user.username,
       user.token,
-    ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData}));
+    ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData})); 
   };
 
   useEffect(() => {
@@ -55,6 +55,7 @@ export default function Profile() {
   }
 
   return (
+
     <>
     <div className='container-xxl'>
       <Menu />
