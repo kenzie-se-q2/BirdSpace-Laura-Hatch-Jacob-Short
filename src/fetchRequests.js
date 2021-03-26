@@ -81,6 +81,17 @@ export const birdPhotoRequest = () => {
   );
 };
 
+export const UserRequest = (
+  username, token
+) => {
+  return fetch(baseURL + `users/ + ${username}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    },
+  }).then((res) => res.json());
+};
+
 // export const searchUserRequest = (username) = > {
 //   return fetch(baseURL + "users/" + username, {
 //     method: 'GET', 

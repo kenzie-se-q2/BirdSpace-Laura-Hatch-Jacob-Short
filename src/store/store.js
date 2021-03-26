@@ -16,11 +16,11 @@ export const PATCH_USER = "PATCH_USER";
 const reducer = (state, action) => {
   switch (action.type) {
     case LOGIN:
-      return { user: action.payload };
+      return { ...state, user: action.payload };
     case LOGOUT:
       return { user: {} };
     case SIGN_UP:
-      return { user: action.payload };
+      return { ...state, userData: action.payload };
     case GET_MESSAGES:
       return { messages: action.payload};
     case POST_MESSAGE:

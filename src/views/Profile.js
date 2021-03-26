@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
+import image from '../assets/Images/birdhome1.PNG'
+import  {UserRequest, putPhotoRequest} from "../fetchRequests";
 
 export default function Profile() {
   const user = useStore((state) => state.user);
@@ -10,6 +12,16 @@ export default function Profile() {
     password: "",
     about: "",
   });
+  const [userData, setUserData] = useState({
+    about: "",
+    createdAt: "",
+    displayName: "",
+    googleId: null,
+    pictureLocation: null,
+    updatedAt: "",
+    username: ""
+  });
+  const [photo, setPhoto] = useState(null)
 
   const handleChange = (e) => {
     const inputName = e.target.name;
@@ -27,16 +39,34 @@ export default function Profile() {
       user.token,
     ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData}));
   };
+
+  useEffect(() => {
+    console.log(user)
+    UserRequest(user.username, user.token)
+      .then((data) => {
+      console.log("this is userdata", data)
+        setUserData(data.user)
+      })
+  },[])
+  
+  function handleSubmitPhoto(e) {
+    putPhotoRequest(user.token, user.username, photo)
+    .then((res) => setPhoto(res));
+  }
+
   return (
     <>
+    <div className='container-xxl'>
       <Menu />
       <h1>Welcome {user.username}!</h1>
-      {/* <img {user.picturelocation} /> */}
+      <h2>Set Profile Picture:</h2>
+      <input type="file" onChange={e => setPhoto(e.target.files[0])}/>
+      <button onClick={handleSubmitPhoto}>Update My Photo</button>
       <h2>{user.displayName}</h2>
       <h2>{user.about}</h2>
 
       <form id="login-form" onSubmit={handleUpdated}>
-        <label htmlFor="displayName">DisplayName</label>&#160;
+        <label htmlFor="displayName">DisplayName</label>
         <input
           type="text"
           name="displayName"
@@ -45,8 +75,8 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
-        &#160; &#160;
-        <label htmlFor="password">Password</label>&#160;
+       
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           name="password"
@@ -54,22 +84,16 @@ export default function Profile() {
           required
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
-        <label htmlFor="About">About</label>&#160;
+        <label htmlFor="About">About</label>
         <input
-          type="about"
-          name="about"
-          size="60"
           value={formData.about}
           required
           onChange={handleChange}
         />
-        <br></br>
-        <br></br>
-        <div id="center"></div>
         <button type="submit">Update User</button>
+        <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
       </form>
+      </div>
     </>
   );
 }
