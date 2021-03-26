@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Likes from '../components/Likes';
+import  {UserRequest} from "../fetchRequests";
+import { PATCH_USER, useStore } from "../store/store";
+
 
 
 export const BirdCard = () => {
+  const user = useStore((state) => state.user);
   const [newInput, setNewInput] = useState ([])
   const [birdPhotos, setBirdPhotos] = useState([
     {
@@ -47,6 +51,25 @@ export const BirdCard = () => {
               setNewInput(e.target.value)
           
             }
+
+            const [userData, setUserData] = useState({
+              about: "",
+              createdAt: "",
+              displayName: "",
+              googleId: null,
+              pictureLocation: null,
+              updatedAt: "",
+              username: ""
+            });
+
+            useEffect(() => {
+              // console.log(user)
+              UserRequest(user.username, user.token)
+                .then((data) => {
+                  // console.log("this is userdata", data)
+                  setUserData(data.user)
+                })
+            },[])
         
   
   return (
@@ -77,7 +100,7 @@ export const BirdCard = () => {
         }}>
         <img className="card-img-top" alt="bird" src={photo.url} />
     <div className="card-body">
-          <h5 className="card-title">Bird Space: Your space to like your favorite birds</h5>
+          <span className="card-title">{user.username}</span>
           <Likes />
         </div>
       </div>)}
@@ -89,10 +112,3 @@ export const BirdCard = () => {
 
 export default BirdCard;
 
-{/* <input type="text" class="form-control" aria-label="Small" 
-aria-describedby="inputGroup-sizing-sm"
-value={newInput}
-onChange={handleNewInputChange}/>
-*/}
-{/* </form> */}
-{/* <form className="ImageUploaderForm"> */}

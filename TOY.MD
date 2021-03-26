@@ -198,3 +198,11 @@
       {/* {JSON.stringify("this is user",userData)} */} -->
       {console.log(userData)}
               {JSON.stringify(userData)}
+
+              {/* <input type="text" class="form-control" aria-label="Small" 
+aria-describedby="inputGroup-sizing-sm"
+value={newInput}
+onChange={handleNewInputChange}/>
+*/}
+{/* </form> */}
+{/* <form className="ImageUploaderForm"> */}
