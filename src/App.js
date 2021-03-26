@@ -16,6 +16,7 @@ import { EditUser} from './components/EditUser';
 
 
 import React, {createContext, useState, useEffect} from 'react';
+import UserList from "./views/UserList";
 
 
 
@@ -38,6 +39,7 @@ function App() {
         <Route path='./BirdCard' component={BirdCard}/>
         <Route path='/searchUser' component={searchUser}/>
         <Route path='/FAQ' component={FAQ}/>
+        <Route path='/userlist' component={UserList}/>
         <Route component={NotFound} />
       </Switch>
     </div>

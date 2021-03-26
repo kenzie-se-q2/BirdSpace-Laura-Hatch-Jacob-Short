@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
 import image from '../assets/Images/birdhome1.PNG'
+import  {UserRequest} from "../fetchRequests";
 
 export default function Profile() {
   const user = useStore((state) => state.user);
@@ -10,6 +11,16 @@ export default function Profile() {
     displayName: "",
     password: "",
     about: "",
+  });
+
+  const [userData, setUserData] = useState({
+    about: "",
+    createdAt: "",
+    displayName: "",
+    googleId: null,
+    pictureLocation: null,
+    updatedAt: "",
+    username: ""
   });
 
   const handleChange = (e) => {
@@ -26,9 +37,22 @@ export default function Profile() {
       formData.password,
       user.username,
       user.token,
-    ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData}));
+    ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData})); 
   };
+
+useEffect(() => {
+  console.log(user)
+  UserRequest(user.username, user.token)
+    .then((data) => {
+      //console.log("this is userdata", data)
+      setUserData(data.user)
+    })
+},[])
+
+
+
   return (
+
     <>
     <div className='container-xxl'>
       <Menu />

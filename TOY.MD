@@ -152,3 +152,17 @@
  <!-- {/* <li className="breadcrumb-item active" aria-current="page">
                 <Link to="">Sign Out</Link> */}
               {/* </li> */} -->
+
+              <!-- // export const searchUserRequest = (username) = > {
+//   return fetch(baseURL + "users/" + username, {
+//     method: 'GET', 
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify({
+//       displayName,
+//       about,
+//     })
+//   }).then((res) => res.json())
+// };
+// this is not correct way to format this request, will adjust -->

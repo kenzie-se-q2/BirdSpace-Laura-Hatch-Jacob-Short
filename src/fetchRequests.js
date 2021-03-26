@@ -81,22 +81,31 @@ export const birdPhotoRequest = () => {
   );
 };
 
-// export const searchUserRequest = (username) = > {
-//   return fetch(baseURL + "users/" + username, {
-//     method: 'GET', 
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify({
-//       displayName,
-//       about,
-//     })
-//   }).then((res) => res.json())
-// };
-// this is not correct way to format this request, will adjust
 
+export const UserRequest = (
+  username,
+  token
+) => {
+  return fetch(baseURL + "users/" + username, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  }).then((res) => res.json());
+};
 
-
+export const manyUsersRequest = (
+  token
+) => {
+  return fetch(baseURL + "users", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  }).then((res) => res.json());
+};
 
 
 
