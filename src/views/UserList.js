@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import image from '../assets/Images/birdhome1.PNG'
-import  {manyUsersRequest} from "../fetchRequests";
+import  {manyUsersRequest, UserRequest} from "../fetchRequests";
 import { PATCH_USER, useStore } from "../store/store";
 
 
@@ -9,7 +9,9 @@ import { PATCH_USER, useStore } from "../store/store";
 export default function UserList() {
     const user = useStore((state) => state.user)
     const [userData, setUserData] = useState([])      
-                
+           
+    
+
     useEffect(() => {
         manyUsersRequest(user.token)
           .then((data) => {

@@ -31,6 +31,7 @@ export const EyeBrow = (props) => {
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/userlist">User List</Link>
+                <Link to="/user">Users</Link>
               </li>
             </ol>
           </nav>

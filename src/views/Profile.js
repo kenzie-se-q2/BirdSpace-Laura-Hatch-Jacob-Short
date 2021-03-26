@@ -3,7 +3,7 @@ import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
 import image from '../assets/Images/birdhome1.PNG'
-import  {UserRequest} from "../fetchRequests";
+import  {UserRequest, putPhotoRequest} from "../fetchRequests";
 
 export default function Profile() {
   const user = useStore((state) => state.user);
@@ -22,6 +22,8 @@ export default function Profile() {
     updatedAt: "",
     username: ""
   });
+
+  const [photo, setPhoto] = useState(null)
 
   const handleChange = (e) => {
     const inputName = e.target.name;
@@ -51,6 +53,10 @@ useEffect(() => {
     })
 },[])
 
+function handleSubmitPhoto(e) {
+  putPhotoRequest(user.token, user.username, photo)
+  .then((res) => setPhoto(res));
+}
 
 
   return (
@@ -59,6 +65,9 @@ useEffect(() => {
     <div className='container-xxl'>
       <Menu />
       <h1>Welcome {user.username}!</h1>
+      <h2>Set Profile Picture:</h2>
+      <input type="file" onChange={e => setPhoto(e.target.files[0])}/>
+      <button onClick={handleSubmitPhoto}>Update My Photo</button>
       <h2>{user.displayName}</h2>
       <h2>{user.about}</h2>
 
