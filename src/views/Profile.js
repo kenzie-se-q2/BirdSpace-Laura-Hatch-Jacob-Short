@@ -41,10 +41,10 @@ export default function Profile() {
   };
 
 useEffect(() => {
-  console.log(user)
+  // console.log(user)
   UserRequest(user.username, user.token)
     .then((data) => {
-      //console.log("this is userdata", data)
+      // console.log("this is userdata", data)
       setUserData(data.user)
     })
 },[])

@@ -153,7 +153,7 @@
                 <Link to="">Sign Out</Link> */}
               {/* </li> */} -->
 
-              <!-- // export const searchUserRequest = (username) = > {
+              <!-- <!-- // export const searchUserRequest = (username) = > {
 //   return fetch(baseURL + "users/" + username, {
 //     method: 'GET', 
 //     headers: {
@@ -166,3 +166,35 @@
 //   }).then((res) => res.json())
 // };
 // this is not correct way to format this request, will adjust -->
+
+ <!-- {/* <div className="fluid-container bg-secondary d-flex flex-column align-items-center accountuser">
+              {userData && userData.map(account =>
+              console.log(userData)
+              <div className = "card my-2" style ={{
+                  width: '18rem'
+              }}>
+        <div className="card-body">
+          <h5 className="card-title">hi</h5>
+                  {/* <img className="card-img-top" alt="bird" src={photo.url} /> */}
+              {/* </div> */}
+          {/* </div>)} */}
+          {/* </div> */} 
+          {/* </div> */} -->
+           {/* <div className="fluid-container bg-secondary d-flex flex-column align-items-center accountuser">
+              {userData && userData.map(account =>
+              console.log(userData)
+              <div className = "card my-2" style ={{
+                  width: '18rem'
+              }}>
+        <div className="card-body">
+          <h5 className="card-title">hi</h5>
+                  {/* <img className="card-img-top" alt="bird" src={photo.url} /> */}
+              {/* </div> */}
+          {/* </div>)} */}
+          {/* </div> */} 
+          {/* </div> */}
+      )
+}
+      {/* {JSON.stringify("this is user",userData)} */} -->
+      {console.log(userData)}
+              {JSON.stringify(userData)}

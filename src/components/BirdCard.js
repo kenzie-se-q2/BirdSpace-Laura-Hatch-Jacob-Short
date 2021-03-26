@@ -72,11 +72,11 @@ export const BirdCard = () => {
 
     <div className="fluid-container bg-secondary d-flex flex-column align-items-center birdcard">
       {birdPhotos && birdPhotos.map(photo => 
-        <div className="card my-2" style={{
+    <div className="card my-2" style={{
           width: '18rem'
         }}>
         <img className="card-img-top" alt="bird" src={photo.url} />
-        <div className="card-body">
+    <div className="card-body">
           <h5 className="card-title">Bird Space: Your space to like your favorite birds</h5>
           <Likes />
         </div>
