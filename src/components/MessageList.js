@@ -49,8 +49,9 @@ export default function MessageList() {
       <Menu />
       <div>
         <h1>Top 10 Most Liked Messages</h1>
-        <div>
-          {[...messages].sort((a, b) => a.likes.length < b.likes.length ? 1 : -1).slice(0, 10).map((message) => {
+          <div>
+          {[...messages].sort((a, b) => a.likes.length 
+          < b.likes.length ? 1 : -1).slice(0, 10).map((message) => {
           return (
             <div
             style={{
@@ -92,6 +93,7 @@ export default function MessageList() {
         <div/>
       </form>
       </div>
+
       {messages.map((message) => {
         return (
           <div
@@ -113,9 +115,10 @@ export default function MessageList() {
                   deleteMessageButtonClick(event, message.id);
                 }}>Delete Message</button> : null
               }
-            </div>
-            <div class="toast-body">{message.text}</div>
-          </div>
+              </div>
+  
+              <div class="toast-body">{message.text}</div>
+              </div>
           )
         })}
         </>
