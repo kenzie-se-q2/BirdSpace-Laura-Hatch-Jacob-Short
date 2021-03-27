@@ -50,9 +50,9 @@ export default function MessageList() {
       <div>
         <h1>Top 10 Most Liked Messages</h1>
         <div>
-          {messages.sort((a, b) => a.likes.length < b.likes.length ? 1 : -1).slice(0, 10).map((message) => {
-        return (
-          <div
+          {[...messages].sort((a, b) => a.likes.length < b.likes.length ? 1 : -1).slice(0, 10).map((message) => {
+          return (
+            <div
             style={{
               opacity: 1,
               marginTop: 16,
