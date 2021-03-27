@@ -4,7 +4,7 @@ import BirdCard from "../components/BirdCard";
 // import datainfo from "../assets/data.json";
 
 //import { NewUserInfo } from '../components/SignUp';
-import { birdPhotoRequest } from "../fetchRequests";
+// import { birdPhotoRequest } from "../fetchRequests";
 
 const FeedItem = (props) => {
 

@@ -55,7 +55,7 @@ export const createMessageRequest = (message, token) => {
     body: JSON.stringify({
       text: message,
     }),
-  })
+  }).then((res) => res.json());
 }
 
 
@@ -71,6 +71,7 @@ export const signUpRequest = (username, displayName, password) => {
   }).then((res) => res.json());
 };
 
+//Not being used due to switching apis
 export const birdPhotoRequest = () => {
   return (
     fetch(eBirdURL + "obs/KZ/recent"),
@@ -85,10 +86,11 @@ export const birdPhotoRequest = () => {
 export const UserRequest = (
   username, token
 ) => {
-  return fetch(baseURL + `users/ + ${username}`, {
+  return fetch(baseURL + `users/${username}`, {
     method: "GET",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
     },
   }).then((res) => res.json());
 };
@@ -105,6 +107,7 @@ export const manyUsersRequest = (
   }).then((res) => res.json());
 };
 
+//TODO be utilized
 export const putPhotoRequest = (token, username, pictureData) => {
   let formData = new FormData()
   formData.append("picture", pictureData)
@@ -117,24 +120,23 @@ export const putPhotoRequest = (token, username, pictureData) => {
   }).then((res) => res.json())
 }
 
-export const deleteUserInput = (token, username) => {
+export const deleteUser = (username, token) => {
   return fetch(baseURL + `users/${username}`, {
-    method: "DELETE",
-    headers: {
-      Authorization: "bearer" + token,
-    }
-  })
-}
-export const deleteMessageRequest = (id, token) => {
-  return fetch(baseURL + "messaages/" + id, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
       Authorization: "Bearer " + token,
-    },
-    body: JSON.stringify({
-      id,
-    }),
+    }
+  })
+}
+
+export const deleteMessageRequest = (id, token) => {
+  return fetch(baseURL + "messages/" + id, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    }
   });
 };
 

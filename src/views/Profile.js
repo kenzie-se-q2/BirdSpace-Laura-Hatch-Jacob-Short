@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PATCH_USER, useStore } from "../store/store";
 import Menu from "../components/Menu";
 import { patchUserRequest } from "../fetchRequests";
 import image from '../assets/Images/birdhome1.PNG'
-import  {UserRequest, putPhotoRequest} from "../fetchRequests";
+import  {UserRequest, putPhotoRequest, deleteUser} from "../fetchRequests";
 
 export default function Profile() {
   const user = useStore((state) => state.user);
@@ -12,7 +12,6 @@ export default function Profile() {
     password: "",
     about: "",
   });
-
   const [userData, setUserData] = useState({
     about: "",
     createdAt: "",
@@ -22,7 +21,6 @@ export default function Profile() {
     updatedAt: "",
     username: ""
   });
-
   const [photo, setPhoto] = useState(null)
 
   const handleChange = (e) => {
@@ -42,22 +40,27 @@ export default function Profile() {
     ).then((formData) => ({ type: PATCH_USER, PAYLOAD: formData})); 
   };
 
+  useEffect(() => {
+    console.log("user?", user);
+    UserRequest(user.username, user.token)
+      .then((data) => {
+      console.log("What?", data)
+        setUserData(data.user)
+      })
+  },[])
   
+  function handleSubmitPhoto(e) {
+    putPhotoRequest(user.token, user.username, photo)
+    .then((res) => setPhoto(res));
+  }
 
-useEffect(() => {
-  console.log(user)
-  UserRequest(user.username, user.token)
-    .then((data) => {
-    console.log("this is userdata", data)
-      setUserData(data.user)
-    })
-},[])
-
-function handleSubmitPhoto(e) {
-  putPhotoRequest(user.token, user.username, photo)
-  .then((res) => setPhoto(res));
-}
-
+  function handleDeleteAccountButtonClick(e) {
+    deleteUser(user.username, user.token)
+      .then((data) => {
+        console.log("We deleted", data)
+        window.location = '/';
+      })
+  }
 
   return (
 
@@ -72,6 +75,7 @@ function handleSubmitPhoto(e) {
       <h2>{user.about}</h2>
 
       <form id="login-form" onSubmit={handleUpdated}>
+        <div>
         <label htmlFor="displayName">DisplayName</label>
         <input
           type="text"
@@ -81,7 +85,8 @@ function handleSubmitPhoto(e) {
           required
           onChange={handleChange}
         />
-       
+        </div>
+       <div>
         <label htmlFor="password">Password</label>
         <input
           type="password"
@@ -90,15 +95,20 @@ function handleSubmitPhoto(e) {
           required
           onChange={handleChange}
         />
+        </div>
+        <div>
         <label htmlFor="About">About</label>
         <input
           value={formData.about}
           required
           onChange={handleChange}
         />
+        </div>
         <button type="submit">Update User</button>
         <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
       </form>
+
+      <button onClick={handleDeleteAccountButtonClick} type="button" class="btn btn-danger">DELETE ACCOUNT</button>
       </div>
     </>
   );
