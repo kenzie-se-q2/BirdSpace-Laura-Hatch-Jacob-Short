@@ -22,7 +22,7 @@ export default function UserList() {
  return(
          
     <div className='container-xxl'>
-        <h1>List Friends who love Birds and Little About Them</h1>
+        <h1>List of Friends who love Birds and Little About Them</h1>
         {userData.map((user) =>{
             return (
                 <div
