@@ -31,6 +31,7 @@ function App() {
       <EyeBrow/>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/kwitter-ladeeluc" component={Home} />
         <Route path='/registration' component={Registration} />
         <Route path='/messages' component={MessageList} />
         <Route path='/settings' component={Settings} />
