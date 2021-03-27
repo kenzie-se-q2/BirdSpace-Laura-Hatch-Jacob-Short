@@ -3,6 +3,7 @@ import React from "react";
 // import { Eyebrow } from '';
 import SignUp from "../components/SignUp";
 import image from '../assets/Images/birdhome1.PNG'
+
 export const Registration = (props) => {
   return (
       <>

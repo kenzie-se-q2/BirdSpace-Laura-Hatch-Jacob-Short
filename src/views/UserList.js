@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import image from '../assets/Images/birdhome1.PNG'
 import  {manyUsersRequest, UserRequest} from "../fetchRequests";
 import { PATCH_USER, useStore } from "../store/store";
+import image from '../assets/Images/birdhome1.PNG'
 
 
 

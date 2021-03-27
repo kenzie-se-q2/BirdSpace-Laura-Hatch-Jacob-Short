@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GET_USER, useStore } from '../store/store';
 import { UserRequest } from "../fetchRequests";
+import image from '../assets/Images/birdhome1.PNG'
 
 export default function User() {
     const user = useStore((state) => state.user)
@@ -8,10 +9,8 @@ export default function User() {
     const [userData, setUserData] = useState("")
 
     useEffect(() => {
-        // console.log(user)
         UserRequest(user.username, user.token)
           .then((data) => {
-            console.log("this is userdata", data)
             setUserData(data.user)
           })
       },[])
@@ -31,6 +30,8 @@ export default function User() {
     
 
         return (
+        
+          <div className="container - xxl">
             <form id="search user" onSubmit={handleGetUser}>
         <label htmlFor="">Search User</label>
         <input
@@ -41,6 +42,9 @@ export default function User() {
           required 
           onChange={handleChange}/>
         <button type='submit'>SEARCH</button>
-      </form>
-        )
-}
+             <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
+        </form>
+        </div>
+
+    )
+  } 
