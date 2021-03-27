@@ -44,7 +44,6 @@ export default function Profile() {
     console.log("user?", user);
     UserRequest(user.username, user.token)
       .then((data) => {
-      console.log("What?", data)
         setUserData(data.user)
       })
   },[])
@@ -57,60 +56,70 @@ export default function Profile() {
   function handleDeleteAccountButtonClick(e) {
     deleteUser(user.username, user.token)
       .then((data) => {
-        console.log("We deleted", data)
         window.location = '/';
       })
   }
 
   return (
 
-    <>
+    <div className="profile">
     <div className='container-xxl'>
       <Menu />
       <h1>Welcome {user.username}!</h1>
-      <h2>Set Profile Picture:</h2>
-      <input type="file" onChange={e => setPhoto(e.target.files[0])}/>
-      <button onClick={handleSubmitPhoto}>Update My Photo</button>
-      <h2>{user.displayName}</h2>
-      <h2>{user.about}</h2>
-
       <form id="login-form" onSubmit={handleUpdated}>
         <div>
-        <label htmlFor="displayName">DisplayName</label>
-        <input
-          type="text"
-          name="displayName"
-          value={formData.displayName}
-          autoFocus
-          required
-          onChange={handleChange}
-        />
-        </div>
-       <div>
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          required
-          onChange={handleChange}
-        />
-        </div>
-        <div>
-        <label htmlFor="About">About</label>
-        <input
-          value={formData.about}
-          required
-          onChange={handleChange}
-        />
-        </div>
-        <button type="submit">Update User</button>
-        <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
-      </form>
+        <form>
+  <div class="form-row">
+    <div class="col-3">
+         <input type="text" class="form-control" placeholder="User Name"
+         name="displayName"
+         value={formData.displayName}
+         autoFocus
+         required
+         onChange={handleChange}/>
+    </div>
+    </div>
+   
 
-      <button onClick={handleDeleteAccountButtonClick} type="button" class="btn btn-danger">DELETE ACCOUNT</button>
-      </div>
-    </>
+       <div>
+       <div class="form-row">
+    <div class="col-3">
+         <input type="password" class="form-control" placeholder="Password"
+         name="password"
+        value={formData.password}
+        required
+        onChange={handleChange}
+        />      
+    </div>
+
+    </div>
+        <form>
+      <div class="form-row">
+      <div class="col-3">
+           <input type="text" class="form-control" placeholder="Display Name"
+          value={formData.about}
+          name="about"
+          required
+          onChange={handleChange}
+          />
+    </div>
+          </div>
+      <h2>{user.displayName}</h2>
+      <h2>{user.about}</h2>
+        <button type="submit">Update User</button>
+        <div>
+        <button onClick={handleDeleteAccountButtonClick} type="button" class="btn btn-danger">DELETE ACCOUNT</button>
+        </div>
+       <img src={image} className="img-thumbnail"  alt="Logo for birdspace"/>
+          </form>
+          </div>
+         </form>
+          </div>
+          </form>
+       </div>
+       </div>
   );
 }
 
+
+         

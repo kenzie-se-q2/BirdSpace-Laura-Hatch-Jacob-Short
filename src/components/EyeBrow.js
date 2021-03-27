@@ -11,14 +11,10 @@ export const EyeBrow = (props) => {
 
             <ol className="breadcrumb m-0 background">
               <li className="breadcrumb-item">
-                <a href="#">
                   <Link to="/">Home</Link>
-                </a>
               </li>
               <li className="breadcrumb-item">
-                <a href="#">
                   <Link to="/registration">Sign Up</Link>
-                </a>
               </li>
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/profile">Profile</Link>
@@ -32,9 +28,9 @@ export const EyeBrow = (props) => {
               <li className="breadcrumb-item active" aria-current="page">
                 <Link to="/userlist">User List</Link>
               </li>
-              <li className="breadcrumb-item active" aria-current="page">
+              {/* <li className="breadcrumb-item active" aria-current="page">
               <Link to="/user">Users</Link>
-              </li>
+              </li> */}
             </ol>
           </nav>
         </div>
