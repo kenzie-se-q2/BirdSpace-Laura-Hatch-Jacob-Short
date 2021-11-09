@@ -1,0 +1,3 @@
+{ 
+  "mongoURI": "mongodb+srv://jacob_short:jacob_short@serverlessinstance0.pj8ft.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}
